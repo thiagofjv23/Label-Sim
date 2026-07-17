@@ -38,3 +38,8 @@ Expandir gravadora
 ↓
 
 Repetir
+
+UI Guidelines:
+A interface nunca toma decisões.
+Ela apenas mostra.
+Toda decisão pertence à simulação.
