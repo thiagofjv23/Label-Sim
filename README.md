@@ -52,3 +52,59 @@ toda entidade possui ID único
 evitar números mágicos
 documentar funções públicas
 
+
+Criar as seguintes pastas:
+ChartWarsBrasil/
+│
+├── docs/                        # Toda a documentação canônica
+│   │
+│   ├── 00_Visao/
+│   ├── 01_Regras/
+│   ├── 02_Arquitetura/
+│   ├── 03_Entities/
+│   ├── 04_Simulacao/
+│   ├── 05_Economia/
+│   ├── 06_Musica/
+│   ├── 07_IA/
+│   ├── 08_UI/
+│   ├── 09_Roadmap/
+│   └── decisions/
+│
+├── database/
+│   │
+│   ├── artists/
+│   ├── bands/
+│   ├── songs/
+│   ├── albums/
+│   ├── labels/
+│   ├── genres/
+│   ├── countries/
+│   ├── charts/
+│   ├── radio/
+│   ├── media/
+│   └── templates/
+│
+├── src/
+│   │
+│   ├── engine/
+│   ├── simulation/
+│   ├── entities/
+│   ├── systems/
+│   ├── ui/
+│   ├── utils/
+│   └── save/
+│
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   ├── logos/
+│   ├── fonts/
+│   └── audio/
+│
+├── tests/
+│
+├── tools/
+│
+├── saves/
+│
+└── backups/
