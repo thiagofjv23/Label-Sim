@@ -1,0 +1,73 @@
+{
+  "id": "artist_roberto_carlos",
+  "type": "Artist",
+
+  "name": "Roberto Carlos Braga",
+  "stageName": "Roberto Carlos",
+
+  "birthDate": "1941-04-19",
+  "birthPlace": {
+    "city": "Cachoeiro de Itapemirim",
+    "state": "Espírito Santo",
+    "country": "Brasil"
+  },
+
+  "gender": "Male",
+
+  "careerStatus": "Active",
+  "careerStart": 1959,
+  "careerEnd": null,
+
+  "artistType": "Solo",
+
+  "labelId": "label_sony_music",
+  "managerId": null,
+
+  "genres": [
+    "MPB",
+    "Jovem Guarda",
+    "Pop",
+    "Romântico"
+  ],
+
+  "skills": {
+    "composition": 96,
+    "vocals": 95,
+    "livePerformance": 92,
+    "musicianship": 80,
+    "charisma": 99
+  },
+
+  "commercial": {
+    "popularity": 99,
+    "prestige": 100,
+    "marketingPower": 98,
+    "mediaAppeal": 98,
+    "fanLoyalty": 100
+  },
+
+  "fanbase": {
+    "size": 9800000,
+    "growth": "Stable",
+    "averageAge": 52
+  },
+
+  "careerStats": {
+    "albumsReleased": 45,
+    "songsReleased": 600,
+    "concertsPerformed": 4500,
+    "awards": 120
+  },
+
+  "relationships": {
+    "bands": [],
+    "producers": [],
+    "collaborators": []
+  },
+
+  "flags": {
+    "isLegend": true,
+    "isHallOfFame": true,
+    "retired": false
+  }
+}
