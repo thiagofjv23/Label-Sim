@@ -43,3 +43,11 @@ UI Guidelines:
 A interface nunca toma decisões.
 Ela apenas mostra.
 Toda decisão pertence à simulação.
+
+Proggraming Guidelines:
+nunca alterar APIs públicas
+nunca modificar módulos não solicitados
+preferir composição à herança
+toda entidade possui ID único
+evitar números mágicos
+documentar funções públicas
