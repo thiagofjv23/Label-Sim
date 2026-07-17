@@ -51,3 +51,4 @@ preferir composição à herança
 toda entidade possui ID único
 evitar números mágicos
 documentar funções públicas
+
