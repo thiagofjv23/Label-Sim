@@ -16,9 +16,14 @@
 
 ## Fase 1 — Persistencia e entidades
 
+- [x] Definir entidades de dominio (Artist, Song, Label) em `src/entities` e
+      seus JSON de exemplo em `database/`.
+- [x] Carregar dados semente do `database/` para o `World` (`SeedLoader`).
 - [ ] Camada de save/load (`src/save`): serializar World + Clock + Rng + IdFactory.
-- [ ] Definir entidades de dominio (Artist, Song, Label) e seus JSON em `database/`.
-- [ ] Carregar dados semente do `database/` para o `World` no inicio.
+- [ ] Validacao de referencias entre entidades no carregamento (ex.: `labelId`,
+      `artistId`, `genreIds` apontando para IDs existentes).
+- [ ] Entidades ainda referenciadas sem arquivo: `album_*`, `genre_*`,
+      `country_*` e artistas citados (ex.: `artist_erasmo_carlos`).
 
 ## Fase 2 — Core loop minimo
 
