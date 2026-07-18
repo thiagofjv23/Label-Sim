@@ -1,0 +1,95 @@
+import { describe, it, expect } from "vitest";
+import { fileURLToPath } from "node:url";
+import { World } from "../src/simulation/World.js";
+import { loadSeedData } from "../src/simulation/SeedLoader.js";
+import { validateReferences } from "../src/simulation/validateReferences.js";
+import type { Artist } from "../src/entities/Artist.js";
+import type { Label } from "../src/entities/Label.js";
+
+/** Diretorio dos dados semente, relativo a este arquivo de teste. */
+const DATABASE_DIR = fileURLToPath(new URL("../database", import.meta.url));
+
+describe("validateReferences", () => {
+  it("reporta referencias pendentes nos dados semente atuais", () => {
+    const world = new World();
+    loadSeedData(world, DATABASE_DIR);
+    const issues = validateReferences(world);
+    const missing = issues.filter((i) => i.kind === "missing").map((i) => i.targetId);
+
+    // Alvos citados pelos exemplos mas ainda sem arquivo em database/.
+    expect(missing).toEqual(
+      expect.arrayContaining([
+        "album_detalhes",
+        "artist_erasmo_carlos",
+        "genre_romantico",
+        "genre_mpb",
+        "country_brazil",
+      ]),
+    );
+  });
+
+  it("nao reporta nada quando todas as referencias existem", () => {
+    const world = new World();
+    const label: Label = {
+      id: "label_x",
+      type: "Label",
+      name: "X Records",
+      countryId: "country_x",
+      foundationYear: 2000,
+      status: "Active",
+      ratings: {
+        reputation: 50,
+        marketing: 50,
+        distribution: 50,
+        artistDevelopment: 50,
+        financialPower: 50,
+        industryInfluence: 50,
+      },
+      commercial: { budget: 0, marketShare: 0, activeArtists: 1, activeContracts: 1 },
+      catalog: { songs: 0, albums: 0 },
+      relationships: { artists: ["artist_x"], bands: [], producers: [] },
+      flags: { majorLabel: false, acceptsDemos: true },
+    };
+    const country = { id: "country_x", type: "Country" };
+    const artist: Partial<Artist> & { id: string; type: "Artist" } = {
+      id: "artist_x",
+      type: "Artist",
+      labelId: "label_x",
+      managerId: null,
+      relationships: { bands: [], producers: [], collaborators: [] },
+    };
+    world.add(label);
+    world.add(country);
+    world.add(artist as Artist);
+
+    const issues = validateReferences(world);
+    // artist_x so referencia label_x (existe); demais campos sao null/vazios.
+    expect(issues).toEqual([]);
+  });
+
+  it("detecta incompatibilidade de tipo", () => {
+    const world = new World();
+    const country = { id: "country_x", type: "Country" };
+    // labelId aponta para um Country em vez de um Label.
+    const artist: Partial<Artist> & { id: string; type: "Artist" } = {
+      id: "artist_y",
+      type: "Artist",
+      labelId: "country_x",
+      managerId: null,
+      relationships: { bands: [], producers: [], collaborators: [] },
+    };
+    world.add(country);
+    world.add(artist as Artist);
+
+    const issues = validateReferences(world);
+    expect(issues).toHaveLength(1);
+    expect(issues[0]).toMatchObject({
+      sourceId: "artist_y",
+      field: "labelId",
+      targetId: "country_x",
+      expectedType: "Label",
+      kind: "type-mismatch",
+      actualType: "Country",
+    });
+  });
+});

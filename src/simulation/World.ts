@@ -40,6 +40,11 @@ export class World {
     return this.entities.get(id);
   }
 
+  /** Indica se existe uma entidade com o ID informado. */
+  has(id: EntityId): boolean {
+    return this.entities.has(id);
+  }
+
   /** Remove uma entidade pelo ID. Retorna `true` se algo foi removido. */
   remove(id: EntityId): boolean {
     return this.entities.delete(id);
@@ -54,6 +59,11 @@ export class World {
       }
     }
     return result;
+  }
+
+  /** Itera sobre todas as entidades do mundo (ordem de insercao). */
+  all(): Iterable<Entity> {
+    return this.entities.values();
   }
 
   /** Numero total de entidades no mundo. */

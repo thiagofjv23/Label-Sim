@@ -5,6 +5,7 @@ import { GameDate } from "./engine/time/GameDate.js";
 import type { System, TickContext } from "./engine/System.js";
 import { World } from "./simulation/World.js";
 import { loadSeedData } from "./simulation/SeedLoader.js";
+import { validateReferences, formatReferenceIssue } from "./simulation/validateReferences.js";
 import type { Artist } from "./entities/Artist.js";
 
 /**
@@ -52,6 +53,15 @@ function main(): void {
   console.log(`Carregados ${loaded} registros de ${DATABASE_DIR}`);
   for (const artist of world.ofType<Artist>("Artist")) {
     console.log(`  ${artist.type}: ${artist.stageName} (pop ${artist.commercial.popularity})`);
+  }
+
+  const issues = validateReferences(world);
+  if (issues.length > 0) {
+    console.warn(`\n${issues.length} referencia(s) pendente(s):`);
+    for (const issue of issues) {
+      console.warn(`  - ${formatReferenceIssue(issue)}`);
+    }
+    console.warn("");
   }
 
   const engine = new Engine({

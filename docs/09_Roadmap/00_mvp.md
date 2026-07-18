@@ -19,11 +19,12 @@
 - [x] Definir entidades de dominio (Artist, Song, Label) em `src/entities` e
       seus JSON de exemplo em `database/`.
 - [x] Carregar dados semente do `database/` para o `World` (`SeedLoader`).
+- [x] Validacao de referencias entre entidades (`validateReferences`): checa
+      existencia e tipo do alvo de `labelId`, `artistId`, `genreIds`, etc.
 - [ ] Camada de save/load (`src/save`): serializar World + Clock + Rng + IdFactory.
-- [ ] Validacao de referencias entre entidades no carregamento (ex.: `labelId`,
-      `artistId`, `genreIds` apontando para IDs existentes).
-- [ ] Entidades ainda referenciadas sem arquivo: `album_*`, `genre_*`,
-      `country_*` e artistas citados (ex.: `artist_erasmo_carlos`).
+- [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
+      `album_detalhes`, `artist_erasmo_carlos`, `genre_romantico`, `genre_mpb`,
+      `country_brazil`.
 
 ## Fase 2 — Core loop minimo
 
