@@ -1,5 +1,6 @@
 {
   "id": "genre_mpb",
+
   "type": "Genre",
 
   "name": "MPB",
@@ -34,12 +35,3 @@
   "activeFromYear": 1965,
   "activeToYear": null
 }
-
-
-Observações
-countryOfOriginId referencia a entidade Country (Brasil).
-parentGenreId permanece null porque MPB é tratado como um gênero principal.
-subgenreIds poderá ser preenchido futuramente com gêneros derivados (caso existam na database).
-popularity representa a popularidade estrutural do gênero no mundo e no Brasil, servindo como modificador para sistemas de mercado.
-commercialAppeal representa o potencial comercial médio do gênero em diferentes mídias. Não é a popularidade do gênero em um determinado ano, mas sim uma característica histórica do estilo.
-activeToYear permanece null porque o gênero continua ativo.

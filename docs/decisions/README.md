@@ -15,4 +15,5 @@ Formato: `NNNN-titulo-curto.md`, numeração sequencial.
 | 0002 | Padronização de ID de Gênero (inglês) | Aceita |
 | 0003 | Gravadora histórica (Album) vs. atual (Artist) | Aceita |
 | 0004 | Entidade vs. Sistema (identidade estática vs. resultado dinâmico) | Aceita |
-| 0005 | Genre como entidade | Aceita |
+| 0005 | Genre como entidade | Aceita (reconciliação aberta — ver nota) |
+| 0006 | Campo `description` (opcional, apenas UI) | Aceita |

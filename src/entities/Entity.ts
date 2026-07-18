@@ -19,4 +19,11 @@ export interface Entity {
   readonly id: EntityId;
   /** Tipo/dominio da entidade em PascalCase, ex.: `Artist`, `Song`, `Label`. */
   readonly type: string;
+  /**
+   * Texto descritivo opcional, estilo enciclopedia, apenas para enriquecer a UI.
+   * A simulacao NUNCA deve depender deste conteudo. Deve ser atemporal — evitar
+   * informacoes que mudam com a evolucao da linha do tempo do jogo.
+   * Ver `docs/decisions/0006-campo-description.md`.
+   */
+  description?: string;
 }

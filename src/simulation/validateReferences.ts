@@ -60,6 +60,11 @@ const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
     genreIds: "Genre",
     songIds: "Song",
   },
+  Genre: {
+    countryOfOriginId: "Country",
+    parentGenreId: "Genre",
+    subgenreIds: "Genre",
+  },
   Label: {
     countryId: "Country",
     "relationships.artists": "Artist",

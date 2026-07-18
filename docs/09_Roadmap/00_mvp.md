@@ -29,11 +29,16 @@
 - [x] Decisoes canonicas registradas em `docs/decisions` (0001 id de album,
       0002 id de genero, 0003 gravadora historica/atual, 0004 entidade vs sistema,
       0005 Genre como entidade). Correcoes de dados/contrato aplicadas.
+- [x] Entidade `Genre` + exemplo `genre_mpb` (validacao estendida; resolve
+      `genre_mpb` em Song/Album).
+- [x] Diretriz `description` (decisao 0006): campo opcional na base `Entity`,
+      apenas UI, atemporal. Exemplos enriquecidos (Artist, Country, Label, Genre).
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
-      `Genre` (`genre_romantic`, `genre_mpb`), `Song` (faixas do album `Detalhes`),
+      `Genre` (`genre_romantic`), `Song` (faixas do album `Detalhes`),
       `Label` (`label_cbs_brasil`), `Artist` (`artist_erasmo_carlos`).
-- [ ] Proxima entidade a modelar: **Genre** (aguardando exemplo do usuario).
-- [ ] Migrar `Artist.genres` (strings) para `genreIds` quando `Genre` existir.
+- [ ] Reconciliar `Genre.popularity`/`commercialAppeal` com a decisao 0005
+      (baseline estrutural vs sistema de mercado) — ver nota em 0005 e Genre ToDo.
+- [ ] Migrar `Artist.genres` (strings) para `genreIds`.
 - [ ] Migrar `Country.genreAffinity` para chaves por `genreId`.
 
 ## Pendencias registradas (sistemas futuros)
