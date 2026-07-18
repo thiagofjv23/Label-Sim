@@ -24,8 +24,13 @@
 - [ ] Camada de save/load (`src/save`): serializar World + Clock + Rng + IdFactory.
 - [x] Entidade `Country` (mercado) + exemplo `country_brazil` em
       `database/countries` (resolve a referencia `Label.countryId`).
+- [x] Entidade `Album` + exemplo `Detalhes` em `database/albums` (validacao de
+      referencias estendida a Album).
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
-      `album_detalhes`, `artist_erasmo_carlos`, `genre_romantico`, `genre_mpb`.
+      `Genre` (`genre_mpb`, `genre_romantico`/`genre_romantic`), `Song` (faixas do
+      album), `Label` (`label_cbs_brasil`), `Artist` (`artist_erasmo_carlos`).
+- [ ] Reconciliar ids divergentes (ver `docs/03_Entities/Album.md`): `Song.albumId`
+      x id do album; `genre_romantico` x `genre_romantic`; label historica x atual.
 
 ## Fase 2 — Core loop minimo
 

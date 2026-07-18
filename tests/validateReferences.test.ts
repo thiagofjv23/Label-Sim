@@ -23,6 +23,9 @@ describe("validateReferences", () => {
         "artist_erasmo_carlos",
         "genre_romantico",
         "genre_mpb",
+        // referencias trazidas pelo Album (gravadora historica e faixas):
+        "label_cbs_brasil",
+        "song_se_eu_partir",
       ]),
     );
     // country_brazil ja possui arquivo em database/countries: nao deve constar.
