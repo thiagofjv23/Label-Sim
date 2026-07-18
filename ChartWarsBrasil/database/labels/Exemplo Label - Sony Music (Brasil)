@@ -1,0 +1,47 @@
+{
+  "id": "label_sony_music",
+
+  "type": "Label",
+
+  "name": "Sony Music",
+
+  "countryId": "country_brazil",
+
+  "foundationYear": 1988,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 99,
+    "marketing": 98,
+    "distribution": 100,
+    "artistDevelopment": 95,
+    "financialPower": 99,
+    "industryInfluence": 99
+  },
+
+  "commercial": {
+    "budget": 100000000,
+    "marketShare": 28,
+    "activeArtists": 120,
+    "activeContracts": 145
+  },
+
+  "catalog": {
+    "songs": 85000,
+    "albums": 12000
+  },
+
+  "relationships": {
+    "artists": [
+      "artist_roberto_carlos"
+    ],
+    "bands": [],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": true,
+    "acceptsDemos": false
+  }
+}
