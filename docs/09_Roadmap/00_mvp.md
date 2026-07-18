@@ -26,11 +26,23 @@
       `database/countries` (resolve a referencia `Label.countryId`).
 - [x] Entidade `Album` + exemplo `Detalhes` em `database/albums` (validacao de
       referencias estendida a Album).
+- [x] Decisoes canonicas registradas em `docs/decisions` (0001 id de album,
+      0002 id de genero, 0003 gravadora historica/atual, 0004 entidade vs sistema,
+      0005 Genre como entidade). Correcoes de dados/contrato aplicadas.
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
-      `Genre` (`genre_mpb`, `genre_romantico`/`genre_romantic`), `Song` (faixas do
-      album), `Label` (`label_cbs_brasil`), `Artist` (`artist_erasmo_carlos`).
-- [ ] Reconciliar ids divergentes (ver `docs/03_Entities/Album.md`): `Song.albumId`
-      x id do album; `genre_romantico` x `genre_romantic`; label historica x atual.
+      `Genre` (`genre_romantic`, `genre_mpb`), `Song` (faixas do album `Detalhes`),
+      `Label` (`label_cbs_brasil`), `Artist` (`artist_erasmo_carlos`).
+- [ ] Proxima entidade a modelar: **Genre** (aguardando exemplo do usuario).
+- [ ] Migrar `Artist.genres` (strings) para `genreIds` quando `Genre` existir.
+- [ ] Migrar `Country.genreAffinity` para chaves por `genreId`.
+
+## Pendencias registradas (sistemas futuros)
+
+- [ ] **Sistema de contratos e vinculos historicos** (decisao 0003): gravadora,
+      artista, inicio, termino, tipo de contrato, situacao. Ate la,
+      `currentLabelId` cobre so o vinculo atual.
+- [ ] **Sistema de tendencias de mercado** (decisao 0005): popularidade de genero
+      por pais e periodo historico; le `Genre` e `Country` por referencia.
 
 ## Fase 2 — Core loop minimo
 

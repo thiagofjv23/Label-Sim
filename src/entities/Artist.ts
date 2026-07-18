@@ -27,8 +27,13 @@ export interface Artist extends Entity {
 
   artistType: string;
 
-  /** Gravadora atual, ou `null` se independente/sem contrato. */
-  labelId: EntityId | null;
+  /**
+   * Gravadora ATUAL do artista na data presente da simulacao, ou `null` se
+   * independente/sem contrato. Nao confundir com `Album.labelId`, que registra
+   * a gravadora do lancamento no momento historico. Ver
+   * `docs/decisions/0003-gravadora-historica-vs-atual.md`.
+   */
+  currentLabelId: EntityId | null;
   /** Empresario atual, ou `null` se nenhum. */
   managerId: EntityId | null;
 

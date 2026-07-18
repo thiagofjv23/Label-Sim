@@ -20,7 +20,7 @@
 
   "artistType": "Solo",
 
-  "labelId": "label_sony_music",
+  "currentLabelId": "label_sony_music",
   "managerId": null,
 
   "genres": [

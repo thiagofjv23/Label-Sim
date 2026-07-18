@@ -19,17 +19,21 @@ describe("validateReferences", () => {
     // Alvos citados pelos exemplos mas ainda sem arquivo em database/.
     expect(missing).toEqual(
       expect.arrayContaining([
-        "album_detalhes",
         "artist_erasmo_carlos",
-        "genre_romantico",
+        "genre_romantic",
         "genre_mpb",
         // referencias trazidas pelo Album (gravadora historica e faixas):
         "label_cbs_brasil",
         "song_se_eu_partir",
       ]),
     );
-    // country_brazil ja possui arquivo em database/countries: nao deve constar.
+    // Referencias ja resolvidas pelas decisoes canonicas nao devem constar:
+    // - country_brazil possui arquivo em database/countries;
+    // - Song.albumId agora aponta para o id canonico do album (existente);
+    // - genero padronizado como genre_romantic (genre_romantico deixou de existir).
     expect(missing).not.toContain("country_brazil");
+    expect(missing).not.toContain("album_detalhes");
+    expect(missing).not.toContain("genre_romantico");
   });
 
   it("nao reporta nada quando todas as referencias existem", () => {
@@ -58,7 +62,7 @@ describe("validateReferences", () => {
     const artist: Partial<Artist> & { id: string; type: "Artist" } = {
       id: "artist_x",
       type: "Artist",
-      labelId: "label_x",
+      currentLabelId: "label_x",
       managerId: null,
       relationships: { bands: [], producers: [], collaborators: [] },
     };
@@ -74,11 +78,11 @@ describe("validateReferences", () => {
   it("detecta incompatibilidade de tipo", () => {
     const world = new World();
     const country = { id: "country_x", type: "Country" };
-    // labelId aponta para um Country em vez de um Label.
+    // currentLabelId aponta para um Country em vez de um Label.
     const artist: Partial<Artist> & { id: string; type: "Artist" } = {
       id: "artist_y",
       type: "Artist",
-      labelId: "country_x",
+      currentLabelId: "country_x",
       managerId: null,
       relationships: { bands: [], producers: [], collaborators: [] },
     };
@@ -89,7 +93,7 @@ describe("validateReferences", () => {
     expect(issues).toHaveLength(1);
     expect(issues[0]).toMatchObject({
       sourceId: "artist_y",
-      field: "labelId",
+      field: "currentLabelId",
       targetId: "country_x",
       expectedType: "Label",
       kind: "type-mismatch",

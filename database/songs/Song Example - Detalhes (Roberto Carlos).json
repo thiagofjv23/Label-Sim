@@ -7,7 +7,7 @@
 
   "artistId": "artist_roberto_carlos",
 
-  "albumId": "album_detalhes",
+  "albumId": "album_roberto_carlos_detalhes_1971",
 
   "writers": [
     "artist_roberto_carlos",
@@ -19,7 +19,7 @@
   ],
 
   "genreIds": [
-    "genre_romantico",
+    "genre_romantic",
     "genre_mpb"
   ],
 

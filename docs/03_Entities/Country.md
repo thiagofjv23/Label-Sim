@@ -21,10 +21,12 @@ de midia e canais (radios, charts, gravadoras ativas). E o pano de fundo do
    entidades, conforme o TODO de padronizacao de apresentacao (na main). Nao
    participa da simulacao — apenas nomes/cores/icones para a UI.
 
-3. **`genreAffinity` usa nomes de genero como chave (strings).** Mesma tensao de
-   `Artist.genres` (strings) vs `Song.genreIds` (referencias). Decisao pendente:
-   promover **Genre a entidade** e referenciar por `genreId` em todo lugar; e como
-   conciliar isso com um mapa de afinidade (`genreId -> [0,100]`).
+3. **[ENCAMINHADO — `decisions/0005`]** `genreAffinity` usa nomes de genero como
+   chave (strings). Genre passa a ser entidade e tudo referencia por `genreId`;
+   este mapa deve migrar para chaves por `genreId`. Alem disso, afinidade de genero
+   **por pais/mercado** e, na pratica, popularidade por mercado — pertence a um
+   futuro **sistema de tendencias de mercado**, nao a entidade `Genre` (pendencia
+   registrada na decisao 0005). Nao implementar agora.
 
 4. **Convencao de ID nas referencias.** `activeLabels` traz `sony_music_brazil`,
    mas a Label existente tem `id = label_sony_music`. `mainCharts`

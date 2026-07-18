@@ -40,7 +40,7 @@ export interface ReferenceIssue {
  */
 const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
   Artist: {
-    labelId: "Label",
+    currentLabelId: "Label",
     managerId: "Manager",
     "relationships.bands": "Band",
     "relationships.producers": "Producer",

@@ -19,7 +19,7 @@ describe("SeedLoader", () => {
 
     const artist = world.get("artist_roberto_carlos") as Artist | undefined;
     expect(artist?.stageName).toBe("Roberto Carlos");
-    expect(artist?.labelId).toBe("label_sony_music");
+    expect(artist?.currentLabelId).toBe("label_sony_music");
 
     const song = world.get("song_detalhes") as Song | undefined;
     expect(song?.artistId).toBe("artist_roberto_carlos");
