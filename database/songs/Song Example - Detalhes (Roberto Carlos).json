@@ -19,9 +19,10 @@
   ],
 
   "genreIds": [
-    "genre_romantic",
     "genre_mpb"
   ],
+
+  "themeId": "theme_romantic",
 
   "language": "Portuguese",
 

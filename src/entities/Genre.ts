@@ -7,7 +7,7 @@ import type { EntityId } from "../utils/IdFactory.js";
  * Contrato de dados que espelha os JSON de `database/genres`. Conforme a decisao
  * 0005, `Genre` e a fonte unica de generos: Artist, Song e Album referenciam por
  * `genreIds`, sem duplicar nomes. O ID tecnico e padronizado em ingles
- * (`genre_romantic`); `name` guarda o nome apresentado ao jogador em portugues.
+ * (`genre_rock`); `name` guarda o nome apresentado ao jogador em portugues.
  *
  * `Genre` guarda apenas dados estruturais e historicos relativamente estaveis.
  * Popularidade, demanda e apelo comercial sao ESTADOS DINAMICOS DO MERCADO

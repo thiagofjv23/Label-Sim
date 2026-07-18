@@ -20,20 +20,20 @@ describe("validateReferences", () => {
     expect(missing).toEqual(
       expect.arrayContaining([
         "artist_erasmo_carlos",
-        "genre_romantic",
         // referencias trazidas pelo Album (gravadora historica e faixas):
         "label_cbs_brasil",
         "song_se_eu_partir",
       ]),
     );
     // Referencias ja resolvidas nao devem constar:
-    // - country_brazil e genre_mpb ja possuem arquivo em database/;
+    // - country_brazil, genre_mpb e theme_romantic ja possuem arquivo em database/;
     // - Song.albumId agora aponta para o id canonico do album (existente);
-    // - genero padronizado como genre_romantic (genre_romantico deixou de existir).
+    // - "romantic" deixou de ser genero (virou Theme): genre_romantic nao e mais referenciado.
     expect(missing).not.toContain("country_brazil");
     expect(missing).not.toContain("genre_mpb");
+    expect(missing).not.toContain("theme_romantic");
     expect(missing).not.toContain("album_detalhes");
-    expect(missing).not.toContain("genre_romantico");
+    expect(missing).not.toContain("genre_romantic");
   });
 
   it("nao reporta nada quando todas as referencias existem", () => {

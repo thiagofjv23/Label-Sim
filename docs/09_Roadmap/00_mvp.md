@@ -26,18 +26,20 @@
       `database/countries` (resolve a referencia `Label.countryId`).
 - [x] Entidade `Album` + exemplo `Detalhes` em `database/albums` (validacao de
       referencias estendida a Album).
-- [x] Decisoes canonicas registradas em `docs/decisions` (0001 id de album,
-      0002 id de genero, 0003 gravadora historica/atual, 0004 entidade vs sistema,
-      0005 Genre como entidade). Correcoes de dados/contrato aplicadas.
+- [x] Decisoes canonicas registradas em `docs/decisions` (0001-0007).
+      Correcoes de dados/contrato aplicadas.
 - [x] Entidade `Genre` + exemplo `genre_mpb` (validacao estendida; resolve
       `genre_mpb` em Song/Album).
 - [x] Diretriz `description` (decisao 0006): campo opcional na base `Entity`,
       apenas UI, atemporal. Exemplos enriquecidos (Artist, Country, Label, Genre).
-- [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
-      `Genre` (`genre_romantic`), `Song` (faixas do album `Detalhes`),
-      `Label` (`label_cbs_brasil`), `Artist` (`artist_erasmo_carlos`).
 - [x] `Genre.popularity`/`commercialAppeal` removidos (decisao 0005, caminho B):
       estados dinamicos de mercado nunca ficam em `Genre`.
+- [x] Entidade `Theme` (decisao 0007): `romantic` remodelado de genero para tema
+      (`theme_romantic`). Song/Album ganham `themeId`; `resolveEffectiveThemeId`
+      implementa a heranca album -> musica.
+- [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
+      `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`),
+      `Artist` (`artist_erasmo_carlos`).
 - [ ] Migrar `Artist.genres` (strings) para `genreIds`.
 - [ ] Migrar `Country.genreAffinity` para o sistema de mercado (chaves por `genreId`).
 

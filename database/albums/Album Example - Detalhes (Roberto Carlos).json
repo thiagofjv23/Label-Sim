@@ -16,9 +16,10 @@
   "labelId": "label_cbs_brasil",
 
   "genreIds": [
-    "genre_mpb",
-    "genre_romantic"
+    "genre_mpb"
   ],
+
+  "themeId": null,
 
   "language": "pt-BR",
 

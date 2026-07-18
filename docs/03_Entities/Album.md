@@ -21,7 +21,8 @@ simulacao — nao pela entidade.
 | `releaseDate` | `1971-12-01` | Data de lancamento `AAAA-MM-DD`. Dia desconhecido usa o 1o do mes conhecido. |
 | `countryId` | `country_brazil` | Referencia ao pais de origem (`Country`). |
 | `labelId` | `label_cbs_brasil` | Referencia a gravadora do lancamento (`Label`). |
-| `genreIds` | `[genre_mpb, genre_romantic]` | Generos associados (`Genre`). Um album pode ter varios. |
+| `genreIds` | `[genre_mpb]` | Generos associados (`Genre`). Um album pode ter varios. |
+| `themeId` | `null` | Tema do album (`Theme`) ou `null`. Se definido, vale para todas as faixas (decisao 0007). |
 | `language` | `pt-BR` | Idioma predominante das faixas. |
 | `songIds` | `[song_detalhes, ...]` | Faixas na ordem do lancamento (`Song`). |
 | `status` | `released` | `planned` \| `recording` \| `completed` \| `announced` \| `released` \| `cancelled`. |
@@ -34,6 +35,7 @@ Album
  ├── Label    (labelId)
  ├── Country  (countryId)
  ├── Genre    (genreIds[])
+ ├── Theme    (themeId, opcional)
  └── Song     (songIds[])
 ```
 

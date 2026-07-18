@@ -34,6 +34,13 @@ export interface Album extends Entity {
   /** Generos associados (referencias a `Genre`). */
   genreIds: EntityId[];
 
+  /**
+   * Tema do album (referencia a `Theme`), ou `null`. Se definido, aplica-se a
+   * TODAS as musicas do album (prevalece sobre o `themeId` de cada Song); se
+   * `null`, cada musica define o proprio tema. Ver decisao 0007.
+   */
+  themeId: EntityId | null;
+
   /** Idioma predominante, ex.: `pt-BR`. */
   language: string;
 

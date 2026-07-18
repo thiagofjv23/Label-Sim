@@ -24,6 +24,13 @@ export interface Song extends Entity {
 
   genreIds: EntityId[];
 
+  /**
+   * Tema proprio da musica (referencia a `Theme`), ou `null`. Regra de tema
+   * efetivo: se o album da musica tiver `themeId`, ele prevalece sobre este;
+   * caso contrario, vale este. Ver `resolveEffectiveThemeId` e a decisao 0007.
+   */
+  themeId: EntityId | null;
+
   language: string;
 
   /** Data de lancamento em formato ISO `AAAA-MM-DD`. */

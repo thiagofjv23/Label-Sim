@@ -17,3 +17,4 @@ Formato: `NNNN-titulo-curto.md`, numeração sequencial.
 | 0004 | Entidade vs. Sistema (identidade estática vs. resultado dinâmico) | Aceita |
 | 0005 | Genre como entidade | Aceita |
 | 0006 | Campo `description` (opcional, apenas UI) | Aceita |
+| 0007 | Theme (tema) como entidade, distinto de Genre | Aceita |

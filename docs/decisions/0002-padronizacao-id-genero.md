@@ -33,3 +33,10 @@ campo `name`, e não é duplicado nas demais entidades:
   `Genre.name`, sem alterar referências internas.
 - Artist, Song e Album referenciam gêneros exclusivamente por `genreIds`.
 - Detalhamento da entidade em 0005 (Genre como entidade).
+
+## Atualização (0007)
+
+O termo `romantic` **não** é um gênero, e sim um **tema** — foi remodelado como
+entidade `Theme` (`theme_romantic`) na decisão 0007. `genre_romantic` deixou de
+existir. A regra geral desta decisão (ID de gênero em inglês, nome PT em
+`Genre.name`) permanece válida para os gêneros de fato.
