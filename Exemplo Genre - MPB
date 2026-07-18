@@ -1,0 +1,45 @@
+{
+  "id": "genre_mpb",
+  "type": "Genre",
+
+  "name": "MPB",
+  "slug": "mpb",
+
+  "countryOfOriginId": "country_brazil",
+
+  "parentGenreId": null,
+  "subgenreIds": [],
+
+  "description": "Gênero musical brasileiro surgido na década de 1960 que combina elementos da bossa nova, samba, folk e outros estilos nacionais, caracterizado pela valorização da composição e da interpretação.",
+
+  "typicalInstruments": [
+    "Violão",
+    "Piano",
+    "Baixo",
+    "Bateria",
+    "Percussão"
+  ],
+
+  "popularity": {
+    "global": 45,
+    "brazil": 92
+  },
+
+  "commercialAppeal": {
+    "radio": 90,
+    "live": 82,
+    "streaming": 70
+  },
+
+  "activeFromYear": 1965,
+  "activeToYear": null
+}
+
+
+Observações
+countryOfOriginId referencia a entidade Country (Brasil).
+parentGenreId permanece null porque MPB é tratado como um gênero principal.
+subgenreIds poderá ser preenchido futuramente com gêneros derivados (caso existam na database).
+popularity representa a popularidade estrutural do gênero no mundo e no Brasil, servindo como modificador para sistemas de mercado.
+commercialAppeal representa o potencial comercial médio do gênero em diferentes mídias. Não é a popularidade do gênero em um determinado ano, mas sim uma característica histórica do estilo.
+activeToYear permanece null porque o gênero continua ativo.
