@@ -23,9 +23,10 @@ describe("validateReferences", () => {
         "artist_erasmo_carlos",
         "genre_romantico",
         "genre_mpb",
-        "country_brazil",
       ]),
     );
+    // country_brazil ja possui arquivo em database/countries: nao deve constar.
+    expect(missing).not.toContain("country_brazil");
   });
 
   it("nao reporta nada quando todas as referencias existem", () => {

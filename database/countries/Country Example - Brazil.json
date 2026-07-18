@@ -1,6 +1,8 @@
 {
   "id": "country_brazil",
 
+  "type": "Country",
+
   "display": {
     "name": "Brazil",
     "shortName": "Brazil",
