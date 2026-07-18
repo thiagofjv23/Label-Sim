@@ -49,21 +49,24 @@ responsável por tendências de mercado: a popularidade de cada gênero varia po
 país e por período histórico e deve ser processada por esse sistema, lendo
 `Genre` e `Country` por referência.
 
-## Nota — reconciliação aberta (exemplo MPB)
+## Reconciliação encerrada — caminho (B)
 
-O exemplo `genre_mpb` introduziu `popularity` (`global` + `brazil`) e
-`commercialAppeal` **dentro** de `Genre`, justificados como **baseline
-estrutural/histórico** do estilo (não a popularidade que varia por ano). Isso
-tensiona esta decisão (que proíbe popularidade por país em `Genre`).
+O exemplo `genre_mpb` havia introduzido `popularity` (`global` + `brazil`) e
+`commercialAppeal` dentro de `Genre`. Decisão tomada: **caminho (B)**.
 
-Duas leituras a conciliar — decisão pendente do usuário:
+> «Popularidade, demanda e apelo comercial de gêneros são estados dinâmicos do
+> mercado e nunca devem ser armazenados diretamente em "Genre".»
 
-- **(A)** aceitar `popularity`/`commercialAppeal` como baseline permanente
-  (atributo legítimo de entidade pelo princípio 0004); o sistema de mercado apenas
-  *modula* esse baseline no tempo/lugar. Recomenda-se então renomear para explicitar
-  (`baselinePopularity`) e usar chave por `countryId` em vez de `brazil` literal.
-- **(B)** remover qualquer valor por país de `Genre`, movendo-o integralmente ao
-  sistema de tendências de mercado.
+Esses valores variam conforme país, período histórico, mídia e acontecimentos da
+simulação. Portanto, pertencem ao **futuro sistema de mercado/tendências**, que
+lerá `Genre` e `Country` por referência.
 
-Até a decisão, os campos ficam modelados como no exemplo e não são consumidos por
-nenhum sistema. Detalhe em `docs/03_Entities/Genre.md` (ToDo 1).
+A entidade `Genre` armazena apenas dados **estruturais e históricos relativamente
+estáveis**:
+
+`id`, `type`, `name`, `slug`, `countryOfOriginId`, `parentGenreId`,
+`subgenreIds`, `description`, `typicalInstruments`, `activeFromYear`,
+`activeToYear`.
+
+Os campos `popularity` e `commercialAppeal` foram removidos do JSON de exemplo e
+do contrato `src/entities/Genre.ts`.

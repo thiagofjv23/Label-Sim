@@ -21,50 +21,32 @@ apresentação em português em `Genre.name`.
 | `subgenreIds` | `[]` | Subgêneros derivados (`Genre`). |
 | `description` | *(texto)* | Descrição atemporal, apenas UI (diretriz `0006`). |
 | `typicalInstruments` | `[Violão, Piano, ...]` | Instrumentos típicos (sabor/UI). |
-| `popularity` | `{ global: 45, brazil: 92 }` | Popularidade **estrutural** (baseline). Ver ToDo. |
-| `commercialAppeal` | `{ radio, live, streaming }` | Potencial comercial médio por mídia (histórico). |
 | `activeFromYear` | `1965` | Ano de surgimento. |
 | `activeToYear` | `null` | Ano de fim, ou `null` se ativo. |
+
+> `Genre` guarda apenas dados estruturais e históricos estáveis. Popularidade,
+> demanda e apelo comercial são **estados dinâmicos do mercado** e ficam no futuro
+> sistema de mercado/tendências (decisão 0005) — nunca em `Genre`.
 
 ## Observações (do exemplo)
 
 - `countryOfOriginId` referencia a entidade `Country` (Brasil).
 - `parentGenreId` é `null` porque a MPB é tratada como gênero principal.
 - `subgenreIds` poderá ser preenchido futuramente com gêneros derivados.
-- `popularity` representa a popularidade **estrutural** do gênero (mundo e Brasil),
-  servindo como modificador para sistemas de mercado.
-- `commercialAppeal` representa o potencial comercial médio do gênero em
-  diferentes mídias. **Não** é a popularidade em um ano específico, e sim uma
-  característica histórica do estilo.
 - `activeToYear` é `null` porque o gênero continua ativo.
 
 ## ToDo — design a explorar posteriormente
 
-1. **[RECONCILIAR — `decisions/0005`] `popularity` por mercado dentro de `Genre`.**
-   A decisão 0005 diz que a popularidade do gênero **por país/período** não fica em
-   `Genre` (pertence ao sistema de tendências de mercado). O exemplo traz
-   `popularity.brazil`, justificado como popularidade **estrutural/baseline** (não
-   varia por ano). Há duas leituras a conciliar:
-   - **(A)** `popularity`/`commercialAppeal` são baseline permanente do estilo →
-     legítimos como atributo de entidade (princípio 0004), e o sistema de mercado
-     apenas *modula* esse baseline ao longo do tempo/lugar.
-     Sugestão: renomear para deixar a natureza explícita, ex.: `baselinePopularity`,
-     e usar chave por `countryId` em vez de `brazil` literal.
-   - **(B)** Qualquer valor por país sai de `Genre` e vai para o sistema de mercado.
+1. **[RESOLVIDO — `decisions/0005`, caminho B]** `popularity` e `commercialAppeal`
+   removidos de `Genre`. São estados dinâmicos do mercado e pertencem ao futuro
+   sistema de mercado/tendências, que lerá `Genre` e `Country` por referência.
 
-   Decisão pendente do usuário. Até lá, o campo fica modelado como no exemplo e
-   **não** é consumido por nenhum sistema.
+2. **`Artist.genres` (strings) → `genreIds`.** O Artist ainda lista gêneros por
+   nome; migrar para referências quando houver gêneros suficientes na base.
 
-2. **Chave de mercado textual (`brazil`) vs `countryId`.** `popularity.brazil` usa
-   uma chave literal; o padrão do projeto é referenciar países por ID
-   (`country_brazil`). Migrar chaves para `countryId`.
+3. **`Country.genreAffinity` → sistema de mercado.** Afinidade de gênero por
+   mercado é estado dinâmico — mesma direção da decisão 0005; migrar para o sistema
+   de tendências (chaves por `genreId`).
 
-3. **`Artist.genres` (strings) → `genreIds`.** Pendência aberta (decisão 0005): o
-   Artist ainda lista gêneros por nome; migrar para referências quando houver
-   gêneros suficientes na base.
-
-4. **`Country.genreAffinity` → chaves por `genreId`.** Mesma direção; e essa
-   dimensão (afinidade por mercado) tende ao sistema de tendências de mercado.
-
-5. **Hierarquia de gêneros.** `parentGenreId`/`subgenreIds` habilitam árvore de
-   gêneros. Definir regras (um subgênero herda algo do pai? afinidades somam?).
+4. **Hierarquia de gêneros.** `parentGenreId`/`subgenreIds` habilitam árvore de
+   gêneros. Definir regras (um subgênero herda algo do pai?).

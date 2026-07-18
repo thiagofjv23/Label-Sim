@@ -21,17 +21,6 @@
     "Percussão"
   ],
 
-  "popularity": {
-    "global": 45,
-    "brazil": 92
-  },
-
-  "commercialAppeal": {
-    "radio": 90,
-    "live": 82,
-    "streaming": 70
-  },
-
   "activeFromYear": 1965,
   "activeToYear": null
 }

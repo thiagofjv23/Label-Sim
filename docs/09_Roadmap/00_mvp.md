@@ -36,10 +36,10 @@
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
       `Genre` (`genre_romantic`), `Song` (faixas do album `Detalhes`),
       `Label` (`label_cbs_brasil`), `Artist` (`artist_erasmo_carlos`).
-- [ ] Reconciliar `Genre.popularity`/`commercialAppeal` com a decisao 0005
-      (baseline estrutural vs sistema de mercado) — ver nota em 0005 e Genre ToDo.
+- [x] `Genre.popularity`/`commercialAppeal` removidos (decisao 0005, caminho B):
+      estados dinamicos de mercado nunca ficam em `Genre`.
 - [ ] Migrar `Artist.genres` (strings) para `genreIds`.
-- [ ] Migrar `Country.genreAffinity` para chaves por `genreId`.
+- [ ] Migrar `Country.genreAffinity` para o sistema de mercado (chaves por `genreId`).
 
 ## Pendencias registradas (sistemas futuros)
 
