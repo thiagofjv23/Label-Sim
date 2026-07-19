@@ -1,0 +1,58 @@
+Maracanã
+
+{
+  "id": "venue_maracana",
+
+  "type": "Venue",
+
+  "name": "Maracanã",
+
+  "description": "Estádio localizado no Rio de Janeiro, utilizado para grandes apresentações musicais e eventos de escala nacional e internacional.",
+
+  "venueType": "Stadium",
+
+  "countryId": "country_brazil",
+  "state": "Rio de Janeiro",
+  "city": "Rio de Janeiro",
+
+  "openedYear": 1950,
+  "closedYear": null,
+
+  "capacity": {
+    "concert": 70000,
+    "seatedConcert": 50000
+  },
+
+  "stage": {
+    "builtIn": false,
+    "maxStageSize": "Mega",
+    "roof": false,
+    "acousticQuality": 68
+  },
+
+  "facilities": 88,
+
+  "allowedEventTypes": [
+    "Concert",
+    "Festival",
+    "Award",
+    "Promotional"
+  ],
+
+  "genreAffinityIds": [],
+
+  "marketImportance": 98,
+
+  "prestige": 97,
+
+  "operatingCost": 94,
+
+  "bookingDifficulty": 92,
+
+  "defaultTicketPriceMultiplier": 1.1,
+
+  "indoor": false,
+
+  "active": true
+}
+
