@@ -19,12 +19,15 @@ describe("validateReferences", () => {
     // Alvos citados pelos exemplos mas ainda sem arquivo em database/.
     expect(missing).toEqual(
       expect.arrayContaining([
-        "artist_erasmo_carlos",
+        // gravadora atual do Erasmo, ainda sem arquivo:
+        "label_universal_music",
         // referencias trazidas pelo Album (gravadora historica e faixas):
         "label_cbs_brasil",
         "song_se_eu_partir",
       ]),
     );
+    // Erasmo agora existe (arquivo multi-entidade): writers[1] da Song resolve.
+    expect(missing).not.toContain("artist_erasmo_carlos");
     // Referencias ja resolvidas nao devem constar:
     // - country_brazil, genre_mpb e theme_romantic ja possuem arquivo em database/;
     // - Song.albumId agora aponta para o id canonico do album (existente);

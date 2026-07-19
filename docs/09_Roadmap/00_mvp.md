@@ -37,9 +37,11 @@
 - [x] Entidade `Theme` (decisao 0007): `romantic` remodelado de genero para tema
       (`theme_romantic`). Song/Album ganham `themeId`; `resolveEffectiveThemeId`
       implementa a heranca album -> musica.
+- [x] Exemplo de `Artist` Erasmo Carlos adicionado; `SeedLoader` passa a aceitar
+      arquivo com array de entidades (decisao 0008). Resolve `artist_erasmo_carlos`.
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
-      `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`),
-      `Artist` (`artist_erasmo_carlos`).
+      `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`,
+      `label_universal_music`).
 - [ ] Migrar `Artist.genres` (strings) para `genreIds`.
 - [ ] Migrar `Country.genreAffinity` para o sistema de mercado (chaves por `genreId`).
 

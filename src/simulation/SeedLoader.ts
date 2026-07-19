@@ -7,9 +7,11 @@ import type { World } from "./World.js";
  * Carregador de dados semente.
  *
  * Le os arquivos JSON canonicos de `database/` (artistas, musicas, gravadoras,
- * etc.) e os insere no {@link World}. A carga e deterministica: os arquivos sao
- * ordenados por `id` antes da insercao, de modo que a ordem do sistema de
- * arquivos nunca afeta o resultado da simulacao.
+ * etc.) e os insere no {@link World}. Cada arquivo pode conter UMA entidade
+ * (objeto) ou VARIAS (array de objetos) — util para agrupar entidades
+ * relacionadas. A carga e deterministica: as entidades sao ordenadas por `id`
+ * antes da insercao, de modo que a ordem do sistema de arquivos nunca afeta o
+ * resultado da simulacao.
  */
 
 /** Extensao dos arquivos de dados reconhecidos. */
@@ -18,7 +20,7 @@ const JSON_EXTENSION = ".json";
 /** Le e valida todas as entidades JSON de um diretorio, recursivamente. */
 export function readEntitiesFromDir(rootDir: string): Entity[] {
   const files = collectJsonFiles(rootDir).sort();
-  const entities = files.map((file) => parseEntity(file));
+  const entities = files.flatMap((file) => parseEntities(file));
   entities.sort((a, b) => a.id.localeCompare(b.id));
   return entities;
 }
@@ -51,11 +53,20 @@ function collectJsonFiles(dir: string): string[] {
   return result;
 }
 
-/** Le e valida minimamente um arquivo de entidade. */
-function parseEntity(file: string): Entity {
-  const raw = JSON.parse(readFileSync(file, "utf-8")) as Partial<Entity>;
-  if (typeof raw.id !== "string" || typeof raw.type !== "string") {
-    throw new Error(`Entidade invalida em ${file}: 'id' e 'type' sao obrigatorios`);
+/** Le um arquivo com uma entidade (objeto) ou varias (array) e as valida. */
+function parseEntities(file: string): Entity[] {
+  const raw = JSON.parse(readFileSync(file, "utf-8")) as unknown;
+  const items = Array.isArray(raw) ? raw : [raw];
+  return items.map((item, index) => validateEntity(item, file, index));
+}
+
+/** Valida minimamente uma entidade (presenca de `id` e `type`). */
+function validateEntity(item: unknown, file: string, index: number): Entity {
+  const entity = item as Partial<Entity>;
+  if (typeof entity.id !== "string" || typeof entity.type !== "string") {
+    throw new Error(
+      `Entidade invalida em ${file} [${index}]: 'id' e 'type' sao obrigatorios`,
+    );
   }
-  return raw as Entity;
+  return entity as Entity;
 }

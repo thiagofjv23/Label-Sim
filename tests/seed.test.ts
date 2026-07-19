@@ -21,6 +21,11 @@ describe("SeedLoader", () => {
     expect(artist?.stageName).toBe("Roberto Carlos");
     expect(artist?.currentLabelId).toBe("label_sony_music");
 
+    // Arquivo multi-entidade: o segundo artista do mesmo arquivo tambem carrega.
+    const erasmo = world.get("artist_erasmo_carlos") as Artist | undefined;
+    expect(erasmo?.stageName).toBe("Erasmo Carlos");
+    expect(erasmo?.relationships.collaborators).toContain("artist_roberto_carlos");
+
     const song = world.get("song_detalhes") as Song | undefined;
     expect(song?.artistId).toBe("artist_roberto_carlos");
 
