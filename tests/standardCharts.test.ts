@@ -49,6 +49,7 @@ describe("standardCharts (factory)", () => {
       ...buildCountryCharts("country_usa", "Estados Unidos", 95),
       ...buildCountryCharts("country_uk", "Reino Unido", 80),
       ...buildCountryCharts("country_japan", "Japão", 90),
+      ...buildCountryCharts("country_western_europe", "Europa Ocidental", 92),
     ];
 
     for (const chart of expected) {

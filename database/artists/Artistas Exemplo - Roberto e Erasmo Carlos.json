@@ -2,6 +2,7 @@
   {
     "id": "artist_roberto_carlos",
     "type": "Artist",
+    "nationality": "BRA",
 
     "name": "Roberto Carlos Braga",
     "stageName": "Roberto Carlos",
@@ -77,6 +78,7 @@
   {
     "id": "artist_erasmo_carlos",
     "type": "Artist",
+    "nationality": "BRA",
 
     "name": "Erasmo Esteves",
     "stageName": "Erasmo Carlos",

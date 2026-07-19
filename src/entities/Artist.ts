@@ -14,6 +14,16 @@ export interface Artist extends Entity {
   name: string;
   stageName: string;
 
+  /**
+   * Nacionalidade real do artista: codigo ISO 3166-1 alpha-3 (ex.: `BRA`,
+   * `FRA`). E o pais mostrado na UI. Para charts/mercado, o pais efetivo e
+   * resolvido por `resolveMarketCountry` — um pais agregado (ex.: `FRA`) mapeia
+   * para o pais simulado que o cobre (ex.: `country_western_europe`). Nao e uma
+   * referencia a entidade `Country` (o pais real pode nao ser simulado). Ver
+   * decisao 0014.
+   */
+  nationality: string;
+
   /** Data de nascimento em formato ISO `AAAA-MM-DD`. */
   birthDate: string;
   birthPlace: PlaceOfBirth;

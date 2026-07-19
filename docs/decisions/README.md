@@ -24,3 +24,4 @@ Formato: `NNNN-titulo-curto.md`, numeração sequencial.
 | 0011 | Criação de labels e gêneros a partir de arquivos de country | Aceita (diretriz permanente) |
 | 0012 | `brandTag` em Label (base para subsidiárias) | Aceita |
 | 0013 | Normalização e validação das referências de country | Aceita |
+| 0014 | País agregador e nacionalidade de artista | Aceita |

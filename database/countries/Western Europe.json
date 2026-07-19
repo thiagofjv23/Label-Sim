@@ -92,7 +92,10 @@
     "label_emi_group"
   ],
 
-  "mainCharts": [],
+  "mainCharts": [
+    "chart_western_europe_singles",
+    "chart_western_europe_albums"
+  ],
 
   "mainRadioNetworks": []
 }

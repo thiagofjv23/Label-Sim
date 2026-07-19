@@ -60,7 +60,12 @@
       generos (Samba, Pagode, Sertanejo, Axe, Forro, Gospel, Country) + 3 labels
       (EMI, BMG, Som Livre). Referencias do Brasil (`activeLabels`/`mainCharts`)
       normalizadas e validadas.
+- [x] País agregador + nacionalidade (decisão 0014): `country_western_europe`
+      agrega países por ISO (`includedCountries`); `Artist.nationality` (ISO);
+      `resolveMarketCountry` (FRA→WEU, BRA→Brasil). Charts do WEU gerados; 3
+      labels-mãe globais + 8 gêneros criados.
 - [ ] Entidade `RadioStation` + backfill de `mainRadioNetworks` (radios).
+- [ ] `Band` com nacionalidade/agregação; entidade `Venue` + sistema de turnês.
 
 ## Fase 2 (previa) — Sistema de charts
 

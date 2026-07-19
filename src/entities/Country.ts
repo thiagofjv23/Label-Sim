@@ -25,7 +25,17 @@ export interface Country extends Entity {
   isoCode: string;
 
   continent: string;
-  capital: string;
+  /** Capital do pais, ou `null` (ex.: um pais agregador nao tem capital unica). */
+  capital: string | null;
+
+  /**
+   * Codigos ISO 3166-1 alpha-3 dos paises reais que este pais AGREGA. Um pais
+   * agregador (ex.: `country_western_europe`) representa varios paises que nao
+   * sao simulados individualmente: usa-se ele para charts, mercado e exibicao,
+   * enquanto a nacionalidade real de artistas/turnes preserva o pais especifico
+   * pelo ISO. Vazio/ausente em paises comuns. Ver decisao 0014.
+   */
+  includedCountries?: string[];
 
   population: number;
   language: string;

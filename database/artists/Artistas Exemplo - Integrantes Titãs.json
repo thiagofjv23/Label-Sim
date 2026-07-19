@@ -2,6 +2,7 @@
   {
     "id": "artist_branco_mello",
     "type": "Artist",
+    "nationality": "BRA",
     "name": "Branco Mello",
     "stageName": "Branco Mello",
     "description": "Músico brasileiro, baixista e vocalista, integrante da banda Titãs.",
@@ -25,6 +26,7 @@
   {
     "id": "artist_charles_gavin",
     "type": "Artist",
+    "nationality": "BRA",
     "name": "Charles Gavin",
     "stageName": "Charles Gavin",
     "description": "Baterista brasileiro, conhecido por seu trabalho na banda Titãs.",
@@ -48,6 +50,7 @@
   {
     "id": "artist_paulo_miklos",
     "type": "Artist",
+    "nationality": "BRA",
     "name": "Paulo Miklos",
     "stageName": "Paulo Miklos",
     "description": "Músico e ator brasileiro, vocalista e multi-instrumentista ligado à banda Titãs.",
@@ -71,6 +74,7 @@
   {
     "id": "artist_sergio_britto",
     "type": "Artist",
+    "nationality": "BRA",
     "name": "Sérgio Britto",
     "stageName": "Sérgio Britto",
     "description": "Músico brasileiro, vocalista e tecladista da banda Titãs.",
@@ -94,6 +98,7 @@
   {
     "id": "artist_tony_bellotto",
     "type": "Artist",
+    "nationality": "BRA",
     "name": "Tony Bellotto",
     "stageName": "Tony Bellotto",
     "description": "Guitarrista e escritor brasileiro, integrante da banda Titãs.",
@@ -117,6 +122,7 @@
   {
     "id": "artist_arnaldo_antunes",
     "type": "Artist",
+    "nationality": "BRA",
     "name": "Arnaldo Antunes",
     "stageName": "Arnaldo Antunes",
     "description": "Cantor, compositor e poeta brasileiro, ex-integrante da banda Titãs e artista solo.",
@@ -140,6 +146,7 @@
   {
     "id": "artist_nando_reis",
     "type": "Artist",
+    "nationality": "BRA",
     "name": "Nando Reis",
     "stageName": "Nando Reis",
     "description": "Cantor e compositor brasileiro, ex-integrante da banda Titãs e artista solo.",
@@ -163,6 +170,7 @@
   {
     "id": "artist_marcelo_fromer",
     "type": "Artist",
+    "nationality": "BRA",
     "name": "Marcelo Fromer",
     "stageName": "Marcelo Fromer",
     "description": "Guitarrista brasileiro, um dos fundadores da banda Titãs.",

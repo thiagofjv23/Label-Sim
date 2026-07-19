@@ -1,0 +1,49 @@
+{
+  "id": "label_universal_music_group",
+
+  "type": "Label",
+
+  "name": "Universal Music Group",
+
+  "brandTag": "universal",
+
+  "description": "Maior grupo fonográfico do mundo, matriz das operações da Universal Music nos diversos países.",
+
+  "countryId": "country_western_europe",
+
+  "foundationYear": 1998,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 99,
+    "marketing": 99,
+    "distribution": 100,
+    "artistDevelopment": 97,
+    "financialPower": 100,
+    "industryInfluence": 100
+  },
+
+  "commercial": {
+    "budget": 300000000,
+    "marketShare": 26,
+    "activeArtists": 400,
+    "activeContracts": 460
+  },
+
+  "catalog": {
+    "songs": 300000,
+    "albums": 40000
+  },
+
+  "relationships": {
+    "artists": [],
+    "bands": [],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": true,
+    "acceptsDemos": false
+  }
+}

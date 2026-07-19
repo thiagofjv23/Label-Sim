@@ -16,6 +16,7 @@ const COUNTRIES: Array<{ countryId: string; name: string; prestige: number }> = 
   { countryId: "country_usa", name: "Estados Unidos", prestige: 95 },
   { countryId: "country_uk", name: "Reino Unido", prestige: 80 },
   { countryId: "country_japan", name: "Japão", prestige: 90 },
+  { countryId: "country_western_europe", name: "Europa Ocidental", prestige: 92 },
 ];
 
 const chartsDir = fileURLToPath(new URL("../database/charts", import.meta.url));
