@@ -79,6 +79,11 @@ const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
   Chart: {
     countryId: "Country",
   },
+  Country: {
+    activeLabels: "Label",
+    mainCharts: "Chart",
+    // mainRadioNetworks ainda nao validado: entidade RadioStation nao modelada.
+  },
   Label: {
     countryId: "Country",
     "relationships.artists": "Artist",

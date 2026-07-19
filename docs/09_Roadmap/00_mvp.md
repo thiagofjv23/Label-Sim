@@ -56,7 +56,11 @@
       correlacionadas entre Brasil e Japao).
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
       `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`).
-- [ ] Backfill opcional de generos/labels citados em Brasil/EUA/Reino Unido.
+- [x] Backfill de generos/labels de Brasil/EUA/Reino Unido (decisao 0013): 7
+      generos (Samba, Pagode, Sertanejo, Axe, Forro, Gospel, Country) + 3 labels
+      (EMI, BMG, Som Livre). Referencias do Brasil (`activeLabels`/`mainCharts`)
+      normalizadas e validadas.
+- [ ] Entidade `RadioStation` + backfill de `mainRadioNetworks` (radios).
 
 ## Fase 2 (previa) — Sistema de charts
 

@@ -28,7 +28,12 @@ matriz↔filial e as regras de subsidiária serão de um sistema futuro.
 | `sony` | `label_sony_music` (BR), `label_sony_music_entertainment_japan` (JP) |
 | `universal` | `label_universal_music` (BR), `label_universal_music_japan` (JP) |
 
-Sem tag (isoladas por enquanto): `label_abril_music`, `label_avex_group`.
+Sem tag (isoladas por enquanto): `label_abril_music`, `label_avex_group`,
+`label_som_livre` (marcas nacionais).
+
+**Nota (backfill).** Marcas **multinacionais** recebem `brandTag` proativamente,
+mesmo com uma única instância inicial, por certamente se repetirem em outros
+países: `label_emi_brazil` → `emi`, `label_bmg_brazil` → `bmg`.
 
 ## Consequências
 

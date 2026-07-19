@@ -28,16 +28,13 @@ de midia e canais (radios, charts, gravadoras ativas). E o pano de fundo do
    futuro **sistema de tendencias de mercado**, nao a entidade `Genre` (pendencia
    registrada na decisao 0005). Nao implementar agora.
 
-4. **Convencao de ID nas referencias.** `activeLabels` traz `sony_music_brazil`,
-   mas a Label existente tem `id = label_sony_music`. `mainCharts`
-   (`hot100_brazil`) e `mainRadioNetworks` (`jovem_pan_fm`) nao usam prefixo de
-   familia. Padronizar prefixos (`label_`, `chart_`, `radio_`) e reconciliar os
-   exemplos. **Por isso `activeLabels`/`mainCharts`/`mainRadioNetworks` ainda NAO
-   foram ligados a `validateReferences`** — evitar ruido enquanto a convencao nao
-   se resolve.
+4. **[RESOLVIDO — `decisions/0013`]** Convencao de ID nas referencias.
+   `activeLabels` e `mainCharts` normalizados para IDs reais (`label_*`, `chart_*`)
+   e agora validados. `mainRadioNetworks` continua sem validacao ate existir a
+   entidade `RadioStation`.
 
-5. **Entidades-alvo ainda nao modeladas:** `Chart` e `RadioStation`, ja
-   referenciadas aqui. Modelar quando forem criados exemplos.
+5. **Entidade-alvo ainda nao modelada:** `RadioStation` (referenciada em
+   `mainRadioNetworks`). `Chart` ja modelado. Modelar quando houver exemplos.
 
 6. **Valores dependentes de epoca.** `digitalAdoption: 18`,
    `digitalStreamingDemand: 4`, `internetInfluence: 12` refletem ~1990-2000. Como

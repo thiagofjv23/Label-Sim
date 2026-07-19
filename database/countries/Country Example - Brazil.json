@@ -61,16 +61,16 @@
   "awardPrestige": 75,
 
   "activeLabels": [
-    "sony_music_brazil",
-    "universal_music_brazil",
-    "emi_brazil",
-    "bmg_brazil",
-    "som_livre"
+    "label_sony_music",
+    "label_universal_music",
+    "label_emi_brazil",
+    "label_bmg_brazil",
+    "label_som_livre"
   ],
 
   "mainCharts": [
-    "hot100_brazil",
-    "top_albums_brazil"
+    "chart_brazil_singles",
+    "chart_brazil_albums"
   ],
 
   "mainRadioNetworks": [
