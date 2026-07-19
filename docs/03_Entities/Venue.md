@@ -992,3 +992,37 @@ Estrutura final resumida
   "indoor": true,
   "active": true
 }
+
+---
+
+## Modelagem aplicada (implementação)
+
+- **Contrato:** `src/entities/Venue.ts` — espelha a interface acima (`Venue`,
+  `VenueType`, `VenueStageSize`, `VenueEventType`, `VenueCapacity`, `VenueStage`).
+  `description` é herdado da base `Entity` (opcional, apenas UI).
+- **Comportamento (lado sistema):** `src/systems/venue.ts`:
+  - `isVenueAvailable(venue, currentYear)` — ativo e dentro de `openedYear`..`closedYear`;
+  - `canHostStageSize(venue, required)` — compara pela ordem `STAGE_SIZE_ORDER`;
+  - `venueAllowsEvent(venue, eventType)`;
+  - `validateVenue(venue)` — validações estruturais mínimas (faixas [0,100],
+    ordenação de capacidade, prefixo do id, datas, multiplicador > 0).
+- **Validação de referências:** `Venue.countryId → Country` e
+  `Venue.genreAffinityIds → Genre` (via `validateReferences`).
+- **Sem campo `owner`:** conforme a spec, não incluído. Um futuro
+  `labelOwnerId?` entra apenas quando existir o sistema de propriedade de venues.
+- **Instância vs. template:** o Maracanã é uma entidade real em
+  `database/venues/`; `database/templates/venue.template.json` é apenas
+  scaffolding. O `SeedLoader` **ignora** o diretório `templates/` — templates
+  nunca viram entidades vivas (decisão 0015).
+
+## ToDo — a explorar posteriormente
+
+1. **Entidades de evento** que consomem o Venue: `Concert` (`venueId`), `Tour`,
+   `Festival`, `Award`, `Booking`, `LiveAlbum` (`sourceConcertIds`). Nada de
+   agenda/receita/histórico na entidade Venue.
+2. **`City` como entidade** (hoje `city` é texto) — planejamento de turnês,
+   deslocamento, saturação de shows.
+3. **Propriedade de venues** (`labelOwnerId?`) quando houver o sistema.
+4. **Uso dos modificadores** (`acousticQuality`, `facilities`, `operatingCost`,
+   `prestige`, `marketImportance`, `bookingDifficulty`, `defaultTicketPriceMultiplier`)
+   pelos sistemas de turnê, receita, qualidade de show e gravação ao vivo.

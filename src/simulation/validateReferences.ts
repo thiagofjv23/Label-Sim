@@ -83,6 +83,10 @@ const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
     mainCharts: "Chart",
     // mainRadioNetworks ainda nao validado: entidade RadioStation nao modelada.
   },
+  Venue: {
+    countryId: "Country",
+    genreAffinityIds: "Genre",
+  },
   Label: {
     countryId: "Country",
     "relationships.artists": "Artist",

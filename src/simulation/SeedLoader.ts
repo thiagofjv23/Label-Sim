@@ -17,6 +17,12 @@ import type { World } from "./World.js";
 /** Extensao dos arquivos de dados reconhecidos. */
 const JSON_EXTENSION = ".json";
 
+/**
+ * Diretorios ignorados na carga. `templates` guarda scaffolding para criar
+ * entidades (nao sao dados de jogo) e nunca deve virar entidade viva.
+ */
+const IGNORED_DIRS = new Set<string>(["templates"]);
+
 /** Le e valida todas as entidades JSON de um diretorio, recursivamente. */
 export function readEntitiesFromDir(rootDir: string): Entity[] {
   const files = collectJsonFiles(rootDir).sort();
@@ -45,6 +51,9 @@ function collectJsonFiles(dir: string): string[] {
   for (const name of readdirSync(dir)) {
     const fullPath = join(dir, name);
     if (statSync(fullPath).isDirectory()) {
+      if (IGNORED_DIRS.has(name)) {
+        continue;
+      }
       result.push(...collectJsonFiles(fullPath));
     } else if (name.endsWith(JSON_EXTENSION)) {
       result.push(fullPath);

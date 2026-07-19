@@ -193,3 +193,19 @@ base; primeiro caso real de `nationality` que resolve para um agregador.
   representáveis; país de mercado derivado por `resolveMarketCountry`.
 - `Titãs` → `nationality: "BRA"`. `validateReferences` deixou de checar
   `Band.countryId` (nacionalidade não é referência).
+
+---
+
+## 2026-07-19 — Entidade `Venue` + Maracanã (decisão 0015)
+
+Gatilho: usuário subiu o template e as diretrizes de `Venue`.
+
+- Contrato `src/entities/Venue.ts` + helpers `src/systems/venue.ts`
+  (`isVenueAvailable`, `canHostStageSize`, `venueAllowsEvent`, `validateVenue`).
+- **`venue_maracana`** criado como entidade real em
+  `database/venues/Venue Example - Maracanã.json` (dados do template do usuário).
+- Template genérico movido para `database/templates/venue.template.json`
+  (scaffolding); `SeedLoader` passa a **ignorar** `database/templates/`.
+- Validação: `Venue.countryId → Country`, `Venue.genreAffinityIds → Genre`.
+- Diretrizes do usuário preservadas em `docs/03_Entities/Venue.md` (renomeadas de
+  "Diretrizes para Venue") + seção de modelagem aplicada.

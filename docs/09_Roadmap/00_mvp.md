@@ -65,7 +65,11 @@
       `resolveMarketCountry` (FRA→WEU, BRA→Brasil). Charts do WEU gerados; 3
       labels-mãe globais + 8 gêneros criados.
 - [ ] Entidade `RadioStation` + backfill de `mainRadioNetworks` (radios).
-- [ ] `Band` com nacionalidade/agregação; entidade `Venue` + sistema de turnês.
+- [x] `Band` com nacionalidade (decisão 0014).
+- [x] Entidade `Venue` (decisão 0015): contrato + helpers (`isVenueAvailable`,
+      tamanho de palco, `validateVenue`); Maracanã em `database/venues`; loader
+      ignora `templates/`. Validação `countryId`/`genreAffinityIds`.
+- [ ] Sistema de turnês: `Concert`, `Tour`, `Festival`, `LiveAlbum`, `City`.
 
 ## Fase 2 (previa) — Sistema de charts
 
