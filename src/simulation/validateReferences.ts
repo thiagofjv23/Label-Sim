@@ -70,7 +70,6 @@ const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
     subgenreIds: "Genre",
   },
   Band: {
-    countryId: "Country",
     currentLabelId: "Label",
     managerId: "Manager",
     genreIds: "Genre",

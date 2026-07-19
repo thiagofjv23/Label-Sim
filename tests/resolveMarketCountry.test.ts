@@ -48,6 +48,16 @@ describe("resolveMarketCountry", () => {
     expect(marketCountryId).toBe("country_western_europe");
   });
 
+  it("banda (Titãs) resolve pela nacionalidade para o pais de mercado", () => {
+    const world = new World();
+    loadSeedData(world, DATABASE_DIR);
+    const band = world.get("band_titas") as { nationality: string } | undefined;
+    expect(band?.nationality).toBe("BRA");
+
+    const countries = world.ofType<Country>("Country");
+    expect(resolveMarketCountryId(band!.nationality, countries)).toBe("country_brazil");
+  });
+
   it("identifica paises agregadores", () => {
     const countries = loadCountries();
     const weu = countries.find((c) => c.id === "country_western_europe") as Country;

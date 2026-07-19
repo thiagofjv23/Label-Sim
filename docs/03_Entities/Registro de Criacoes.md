@@ -183,3 +183,13 @@ base; primeiro caso real de `nationality` que resolve para um agregador.
   a `description` é atemporal (estilo, não fase de carreira).
 - **Dados biográficos** (data e local de nascimento) são **placeholders a
   verificar**, como nos demais artistas.
+
+---
+
+## 2026-07-19 — `Band` estendida com nacionalidade (decisão 0014)
+
+- `Band.countryId` (referência a `Country`) → `Band.nationality` (ISO), mesmo
+  modelo do `Artist`. Bandas de países agregados (ex.: `DEU`) agora são
+  representáveis; país de mercado derivado por `resolveMarketCountry`.
+- `Titãs` → `nationality: "BRA"`. `validateReferences` deixou de checar
+  `Band.countryId` (nacionalidade não é referência).

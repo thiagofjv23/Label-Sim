@@ -16,7 +16,7 @@ diretrizes gerais: gêneros por `genreIds` (decisão 0005) e gravadora atual em
 | `type` | Sempre `Band`. |
 | `name` | Nome artístico da banda. |
 | `description` | Texto descritivo, apenas UI (diretriz 0006). |
-| `countryId` | País de origem (`Country`). |
+| `nationality` | Nacionalidade (ISO alpha-3) do país de origem, ex.: `BRA`. UI mostra o país; charts usam o país de mercado resolvido (decisão 0014). |
 | `formationDate` | Data de formação (`AAAA-MM-DD`). |
 | `endDate` | Data de encerramento, ou `null` se ativa. |
 | `careerStatus` | `Active`, `Hiatus` ou `Disbanded`. |

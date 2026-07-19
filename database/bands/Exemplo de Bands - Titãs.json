@@ -7,7 +7,7 @@
 
   "description": "Banda brasileira de rock formada em São Paulo, um dos principais nomes do rock nacional.",
 
-  "countryId": "country_brazil",
+  "nationality": "BRA",
 
   "formationDate": "1982-01-01",
   "endDate": null,

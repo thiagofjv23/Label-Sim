@@ -63,9 +63,16 @@ entidade `Venue` e o sistema de turnês serão modelados posteriormente.
 - Labels-mãe globais criadas (ver registro): Universal Music Group, Sony BMG,
   EMI Group — matrizes que compartilham `brandTag` com as subsidiárias por país.
 
+## Atualização — `Band` estendida
+
+`Band.countryId` (referência a `Country`) foi substituído por
+`Band.nationality` (ISO), mesmo modelo do `Artist`. Bandas de países agregados
+(ex.: `DEU`) passam a ser representáveis; o país de mercado é derivado por
+`resolveMarketCountry`. `validateReferences` não valida `nationality` (não é
+referência a entidade). Titãs → `nationality: "BRA"`.
+
 ## ToDo futuro
 
-- `Band` também precisará de nacionalidade/agregação (hoje usa `countryId`).
 - Entidade `Venue` + sistema de turnês (venues por país real, mercado agregado).
 - Possível entidade leve de "país real" (ISO → nome/gentílico) para a UI, caso a
   exibição precise de mais que o código ISO.

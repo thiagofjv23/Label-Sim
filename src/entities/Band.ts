@@ -15,8 +15,13 @@ export interface Band extends Entity {
 
   name: string;
 
-  /** Pais de origem da banda (referencia a `Country`). */
-  countryId: EntityId;
+  /**
+   * Nacionalidade da banda: codigo ISO 3166-1 alpha-3 do pais de origem
+   * (ex.: `BRA`). E o que a UI mostra. Para charts/mercado, o pais efetivo e
+   * resolvido por `resolveMarketCountry` (ex.: `DEU` -> `country_western_europe`).
+   * Nao e referencia a entidade `Country`. Mesmo modelo do `Artist` (decisao 0014).
+   */
+  nationality: string;
 
   /** Data de formacao em formato ISO `AAAA-MM-DD`. */
   formationDate: string;
