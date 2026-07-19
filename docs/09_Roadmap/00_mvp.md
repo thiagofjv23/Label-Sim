@@ -42,7 +42,8 @@
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
       `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`,
       `label_universal_music`).
-- [ ] Migrar `Artist.genres` (strings) para `genreIds`.
+- [x] Migrado `Artist.genres` (strings) para `genreIds` (referencias a `Genre`).
+      Novos generos referenciados a semear: `genre_pop`, `genre_rock`.
 - [ ] Migrar `Country.genreAffinity` para o sistema de mercado (chaves por `genreId`).
 
 ## Pendencias registradas (sistemas futuros)

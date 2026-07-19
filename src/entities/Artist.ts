@@ -37,7 +37,8 @@ export interface Artist extends Entity {
   /** Empresario atual, ou `null` se nenhum. */
   managerId: EntityId | null;
 
-  genres: string[];
+  /** Generos do artista (referencias a `Genre`). Ver decisao 0005. */
+  genreIds: EntityId[];
 
   skills: ArtistSkills;
   commercial: ArtistCommercial;

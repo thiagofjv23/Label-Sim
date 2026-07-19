@@ -42,6 +42,7 @@ const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
   Artist: {
     currentLabelId: "Label",
     managerId: "Manager",
+    genreIds: "Genre",
     "relationships.bands": "Band",
     "relationships.producers": "Producer",
     "relationships.collaborators": "Artist",

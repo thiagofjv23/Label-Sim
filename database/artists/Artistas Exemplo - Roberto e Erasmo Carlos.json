@@ -26,9 +26,9 @@
     "currentLabelId": "label_sony_music",
     "managerId": null,
 
-    "genres": [
-      "MPB",
-      "Pop"
+    "genreIds": [
+      "genre_mpb",
+      "genre_pop"
     ],
 
     "skills": {
@@ -63,7 +63,9 @@
     "relationships": {
       "bands": [],
       "producers": [],
-      "collaborators": []
+      "collaborators": [
+        "artist_erasmo_carlos"
+      ]
     },
 
     "flags": {
@@ -99,10 +101,10 @@
     "currentLabelId": "label_universal_music",
     "managerId": null,
 
-    "genres": [
-      "Rock",
-      "MPB",
-      "Pop"
+    "genreIds": [
+      "genre_rock",
+      "genre_mpb",
+      "genre_pop"
     ],
 
     "skills": {

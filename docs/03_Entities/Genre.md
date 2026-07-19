@@ -41,8 +41,8 @@ apresentação em português em `Genre.name`.
    removidos de `Genre`. São estados dinâmicos do mercado e pertencem ao futuro
    sistema de mercado/tendências, que lerá `Genre` e `Country` por referência.
 
-2. **`Artist.genres` (strings) → `genreIds`.** O Artist ainda lista gêneros por
-   nome; migrar para referências quando houver gêneros suficientes na base.
+2. **[RESOLVIDO]** `Artist.genres` (strings) migrado para `genreIds` (referências
+   a `Genre`). Falta semear `genre_pop` e `genre_rock` (reportados pela validação).
 
 3. **`Country.genreAffinity` → sistema de mercado.** Afinidade de gênero por
    mercado é estado dinâmico — mesma direção da decisão 0005; migrar para o sistema

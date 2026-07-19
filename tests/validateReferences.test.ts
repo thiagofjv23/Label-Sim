@@ -21,6 +21,9 @@ describe("validateReferences", () => {
       expect.arrayContaining([
         // gravadora atual do Erasmo, ainda sem arquivo:
         "label_universal_music",
+        // generos referenciados pelos artistas apos a migracao, ainda sem arquivo:
+        "genre_pop",
+        "genre_rock",
         // referencias trazidas pelo Album (gravadora historica e faixas):
         "label_cbs_brasil",
         "song_se_eu_partir",
