@@ -48,8 +48,15 @@
       `standardCharts` + `npm run generate:charts`. Estrutura de expansao exercitada:
       paises Brasil, EUA, Reino Unido e Japao geram seus charts pela lista em
       `tools/generate-charts.ts` (10 charts semeados).
+- [x] Fluxo de criacao a partir de arquivos de country (decisao 0011): labels de
+      `activeLabels` + generos de `genreAffinity`, calibrados a 2005, com registro
+      em `docs/03_Entities/Registro de Criacoes.md`. Primeiro lote: Japao (3 labels,
+      12 generos). `Genre.countryOfOriginId` agora anulavel.
+- [x] `brandTag` em Label (decisao 0012): base para subsidiarias (Sony/Universal
+      correlacionadas entre Brasil e Japao).
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
       `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`).
+- [ ] Backfill opcional de generos/labels citados em Brasil/EUA/Reino Unido.
 
 ## Fase 2 (previa) — Sistema de charts
 

@@ -23,8 +23,12 @@ export interface Genre extends Entity {
   /** Slug tecnico em minusculas, ex.: `mpb`. */
   slug: string;
 
-  /** Pais de origem do genero (referencia a `Country`). */
-  countryOfOriginId: EntityId;
+  /**
+   * Pais de origem do genero (referencia a `Country`), ou `null` quando a
+   * origem e difusa/nao modelada (ex.: generos com raiz em varios paises ou
+   * anteriores ao conjunto de paises da simulacao). Ver decisao 0011.
+   */
+  countryOfOriginId: EntityId | null;
 
   /** Genero-pai, ou `null` se este for um genero principal (referencia a `Genre`). */
   parentGenreId: EntityId | null;

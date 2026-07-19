@@ -1,0 +1,49 @@
+{
+  "id": "label_sony_music_entertainment_japan",
+
+  "type": "Label",
+
+  "name": "Sony Music Entertainment Japan",
+
+  "brandTag": "sony",
+
+  "description": "Braço japonês de um dos maiores grupos fonográficos do mundo, com forte presença no mercado doméstico do Japão.",
+
+  "countryId": "country_japan",
+
+  "foundationYear": 1968,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 95,
+    "marketing": 94,
+    "distribution": 96,
+    "artistDevelopment": 92,
+    "financialPower": 95,
+    "industryInfluence": 94
+  },
+
+  "commercial": {
+    "budget": 80000000,
+    "marketShare": 25,
+    "activeArtists": 120,
+    "activeContracts": 140
+  },
+
+  "catalog": {
+    "songs": 70000,
+    "albums": 9000
+  },
+
+  "relationships": {
+    "artists": [],
+    "bands": [],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": true,
+    "acceptsDemos": false
+  }
+}

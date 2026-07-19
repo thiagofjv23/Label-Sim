@@ -12,6 +12,14 @@ export interface Label extends Entity {
 
   name: string;
 
+  /**
+   * Tag da marca-mae, quando a mesma marca opera em varios paises como
+   * subsidiarias (ex.: `sony`, `universal`). Gravadoras que compartilham a
+   * `brandTag` pertencem ao mesmo grupo. `null`/ausente para marcas isoladas.
+   * Base para o futuro sistema de subsidiarias. Ver decisao 0012.
+   */
+  brandTag?: string | null;
+
   countryId: EntityId;
 
   foundationYear: number;

@@ -17,8 +17,8 @@ import type { Artist } from "./entities/Artist.js";
  * sao placeholders — servem apenas para provar o fluxo dados -> mundo -> tick.
  */
 
-/** Ano em que a simulacao de exemplo comeca. */
-const START_YEAR = 1990;
+/** Ano de inicio da simulacao. */
+const START_YEAR = 2005;
 /** Quantidade de ticks (dias) a simular. */
 const DEMO_TICKS = 5;
 /** Limites do atributo de popularidade. */

@@ -5,6 +5,8 @@
 
   "name": "Sony Music",
 
+  "brandTag": "sony",
+
   "description": "Gravadora fonográfica multinacional atuante no mercado brasileiro, responsável pelo lançamento de diversos artistas da música popular.",
 
   "countryId": "country_brazil",

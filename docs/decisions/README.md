@@ -21,3 +21,5 @@ Formato: `NNNN-titulo-curto.md`, numeração sequencial.
 | 0008 | Arquivo de dados: uma entidade ou um array | Aceita |
 | 0009 | Autoria de Album: artista OU banda | Aceita |
 | 0010 | Charts: esquema, nomenclatura e janela de apuração | Aceita |
+| 0011 | Criação de labels e gêneros a partir de arquivos de country | Aceita (diretriz permanente) |
+| 0012 | `brandTag` em Label (base para subsidiárias) | Aceita |
