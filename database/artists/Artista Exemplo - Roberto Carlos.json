@@ -27,9 +27,7 @@
 
   "genres": [
     "MPB",
-    "Jovem Guarda",
     "Pop",
-    "Romântico"
   ],
 
   "skills": {
@@ -104,7 +102,6 @@
 
   "genres": [
     "Rock",
-    "Jovem Guarda",
     "MPB",
     "Pop"
   ],
