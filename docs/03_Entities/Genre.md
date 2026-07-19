@@ -42,7 +42,7 @@ apresentação em português em `Genre.name`.
    sistema de mercado/tendências, que lerá `Genre` e `Country` por referência.
 
 2. **[RESOLVIDO]** `Artist.genres` (strings) migrado para `genreIds` (referências
-   a `Genre`). Falta semear `genre_pop` e `genre_rock` (reportados pela validação).
+   a `Genre`). Gêneros `genre_mpb`, `genre_rock` e `genre_pop` semeados.
 
 3. **`Country.genreAffinity` → sistema de mercado.** Afinidade de gênero por
    mercado é estado dinâmico — mesma direção da decisão 0005; migrar para o sistema

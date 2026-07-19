@@ -43,7 +43,9 @@
       `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`,
       `label_universal_music`).
 - [x] Migrado `Artist.genres` (strings) para `genreIds` (referencias a `Genre`).
-      Novos generos referenciados a semear: `genre_pop`, `genre_rock`.
+- [x] Semeados `genre_rock`/`genre_pop` (origem EUA), paises `country_usa` e
+      `country_uk`, e a label `label_universal_music` (Universal Music, Brasil).
+      Metricas 0-100 desses exemplos sao estimativas ajustaveis.
 - [ ] Migrar `Country.genreAffinity` para o sistema de mercado (chaves por `genreId`).
 
 ## Pendencias registradas (sistemas futuros)

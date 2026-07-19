@@ -1,0 +1,64 @@
+{
+  "id": "country_usa",
+
+  "type": "Country",
+
+  "display": {
+    "name": "United States",
+    "shortName": "USA",
+    "adjective": "American",
+    "flag": "🇺🇸",
+    "color": "#3C3B6E"
+  },
+
+  "officialName": "United States of America",
+  "isoCode": "USA",
+
+  "description": "País da América do Norte com a maior indústria fonográfica do mundo e ampla influência cultural global.",
+
+  "continent": "North America",
+  "capital": "Washington, D.C.",
+
+  "population": 295000000,
+  "language": "English",
+  "currency": "US Dollar",
+
+  "marketSize": 100,
+  "economicStrength": 100,
+  "musicCulture": 98,
+  "mediaStrength": 100,
+  "tourInfrastructure": 98,
+  "piracyLevel": 35,
+  "digitalAdoption": 45,
+
+  "genreAffinity": {
+    "Pop": 95,
+    "Rock": 95,
+    "Hip Hop": 92,
+    "Country": 88,
+    "R&B": 88,
+    "Jazz": 78,
+    "Electronic": 72,
+    "Metal": 66,
+    "Gospel": 70,
+    "MPB": 10
+  },
+
+  "radioInfluence": 90,
+  "tvInfluence": 90,
+  "internetInfluence": 40,
+
+  "domesticMusicPreference": 85,
+  "internationalMusicPreference": 40,
+
+  "liveMusicDemand": 90,
+  "physicalMediaDemand": 85,
+  "digitalStreamingDemand": 20,
+
+  "festivalCulture": 90,
+  "awardPrestige": 95,
+
+  "activeLabels": [],
+  "mainCharts": [],
+  "mainRadioNetworks": []
+}

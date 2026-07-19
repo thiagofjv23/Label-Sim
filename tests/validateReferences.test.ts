@@ -19,22 +19,20 @@ describe("validateReferences", () => {
     // Alvos citados pelos exemplos mas ainda sem arquivo em database/.
     expect(missing).toEqual(
       expect.arrayContaining([
-        // gravadora atual do Erasmo, ainda sem arquivo:
-        "label_universal_music",
-        // generos referenciados pelos artistas apos a migracao, ainda sem arquivo:
-        "genre_pop",
-        "genre_rock",
-        // referencias trazidas pelo Album (gravadora historica e faixas):
+        // referencias trazidas pelo Album, ainda sem arquivo (gravadora historica e faixas):
         "label_cbs_brasil",
         "song_se_eu_partir",
       ]),
     );
-    // Erasmo agora existe (arquivo multi-entidade): writers[1] da Song resolve.
+    // Ja resolvidos por arquivos existentes em database/ (nao devem constar):
+    // - artist_erasmo_carlos, genre_pop, genre_rock, label_universal_music criados;
+    // - country_brazil, genre_mpb, theme_romantic ja existiam;
+    // - Song.albumId aponta para o id canonico do album (existente);
+    // - "romantic" virou Theme: genre_romantic nao e mais referenciado.
     expect(missing).not.toContain("artist_erasmo_carlos");
-    // Referencias ja resolvidas nao devem constar:
-    // - country_brazil, genre_mpb e theme_romantic ja possuem arquivo em database/;
-    // - Song.albumId agora aponta para o id canonico do album (existente);
-    // - "romantic" deixou de ser genero (virou Theme): genre_romantic nao e mais referenciado.
+    expect(missing).not.toContain("genre_pop");
+    expect(missing).not.toContain("genre_rock");
+    expect(missing).not.toContain("label_universal_music");
     expect(missing).not.toContain("country_brazil");
     expect(missing).not.toContain("genre_mpb");
     expect(missing).not.toContain("theme_romantic");

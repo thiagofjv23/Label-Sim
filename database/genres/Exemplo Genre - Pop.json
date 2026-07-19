@@ -1,0 +1,27 @@
+{
+  "id": "genre_pop",
+
+  "type": "Genre",
+
+  "name": "Pop",
+  "slug": "pop",
+
+  "countryOfOriginId": "country_usa",
+
+  "parentGenreId": null,
+  "subgenreIds": [],
+
+  "description": "Gênero musical de amplo apelo comercial, caracterizado por melodias acessíveis, refrões memoráveis e produção voltada ao grande público.",
+
+  "typicalInstruments": [
+    "Vocais",
+    "Teclado",
+    "Sintetizador",
+    "Guitarra",
+    "Baixo",
+    "Bateria"
+  ],
+
+  "activeFromYear": 1955,
+  "activeToYear": null
+}
