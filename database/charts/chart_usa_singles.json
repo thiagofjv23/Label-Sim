@@ -1,23 +1,15 @@
 {
-  "id": "chart_brazil_singles",
-
+  "id": "chart_usa_singles",
   "type": "Chart",
-
-  "name": "Top 100 Brasil",
-  "description": "Principal chart brasileiro de singles.",
-
+  "name": "Top 100 Estados Unidos",
+  "description": "Chart nacional de singles.",
   "scope": "Local",
-  "countryId": "country_brazil",
-
+  "countryId": "country_usa",
   "category": "Singles",
-
   "size": 100,
-
   "updateFrequency": "Weekly",
-
   "usesSales": true,
   "usesStreaming": false,
   "usesRadio": false,
-
-  "prestige": 85,
+  "prestige": 95
 }

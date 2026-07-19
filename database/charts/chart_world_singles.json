@@ -1,26 +1,15 @@
 {
   "id": "chart_world_singles",
-
   "type": "Chart",
-
   "name": "Top 100 Mundial",
-  "description": "Principal chart mundial de singles.",
-
+  "description": "Chart mundial de singles.",
   "scope": "World",
   "countryId": null,
-
   "category": "Singles",
-
   "size": 100,
-
   "updateFrequency": "Weekly",
-
   "usesSales": true,
   "usesStreaming": false,
   "usesRadio": false,
-
-  "prestige": 100,
-
+  "prestige": 100
 }
-
-

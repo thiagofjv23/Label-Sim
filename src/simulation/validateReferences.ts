@@ -76,6 +76,9 @@ const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
     genreIds: "Genre",
     albumIds: "Album",
   },
+  Chart: {
+    countryId: "Country",
+  },
   Label: {
     countryId: "Country",
     "relationships.artists": "Artist",

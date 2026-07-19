@@ -43,8 +43,16 @@
       `label_abril_music`, generos `genre_pop_rock`/`genre_new_wave`, 8 artistas
       integrantes e o album `album_titas_como_estao_voces_2003` (decisao 0009:
       autoria de album por artista OU banda).
+- [x] Entidade `Chart` (decisao 0010): esquema, nomenclatura uniforme e janela de
+      apuracao (`resolveChartPeriod`: semanal seg-dom, mensal dia 1-ultimo). Factory
+      `standardCharts` + `npm run generate:charts`; 8 charts (mundial + Brasil, EUA,
+      Reino Unido). Estrutura pronta para expansao a novos paises.
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
       `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`).
+
+## Fase 2 (previa) — Sistema de charts
+
+- [ ] Sistema que calcula o ranking por periodo (usa `resolveChartPeriod` + vendas).
 - [x] Migrado `Artist.genres` (strings) para `genreIds` (referencias a `Genre`).
 - [x] Semeados `genre_rock`/`genre_pop` (origem EUA), paises `country_usa` e
       `country_uk`, e a label `label_universal_music` (Universal Music, Brasil).

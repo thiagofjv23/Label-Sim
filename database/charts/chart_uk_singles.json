@@ -1,0 +1,15 @@
+{
+  "id": "chart_uk_singles",
+  "type": "Chart",
+  "name": "Top 100 Reino Unido",
+  "description": "Chart nacional de singles.",
+  "scope": "Local",
+  "countryId": "country_uk",
+  "category": "Singles",
+  "size": 100,
+  "updateFrequency": "Weekly",
+  "usesSales": true,
+  "usesStreaming": false,
+  "usesRadio": false,
+  "prestige": 80
+}

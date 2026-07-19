@@ -1,0 +1,15 @@
+{
+  "id": "chart_brazil_albums",
+  "type": "Chart",
+  "name": "Top 100 Brasil (Álbuns)",
+  "description": "Chart nacional de álbuns.",
+  "scope": "Local",
+  "countryId": "country_brazil",
+  "category": "Albums",
+  "size": 100,
+  "updateFrequency": "Monthly",
+  "usesSales": true,
+  "usesStreaming": false,
+  "usesRadio": false,
+  "prestige": 85
+}

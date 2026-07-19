@@ -1,0 +1,15 @@
+{
+  "id": "chart_world_albums",
+  "type": "Chart",
+  "name": "Top 100 Mundial (Álbuns)",
+  "description": "Chart mundial de álbuns.",
+  "scope": "World",
+  "countryId": null,
+  "category": "Albums",
+  "size": 100,
+  "updateFrequency": "Monthly",
+  "usesSales": true,
+  "usesStreaming": false,
+  "usesRadio": false,
+  "prestige": 100
+}

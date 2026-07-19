@@ -53,6 +53,11 @@ export class GameDate {
     return this.dayIndex;
   }
 
+  /** Dia da semana: 0 = domingo, 1 = segunda, ..., 6 = sabado (UTC). */
+  weekday(): number {
+    return new Date(this.dayIndex * MS_PER_DAY).getUTCDay();
+  }
+
   /** Decompoe a data em ano, mes e dia. */
   toCalendar(): CalendarParts {
     const date = new Date(this.dayIndex * MS_PER_DAY);
