@@ -45,8 +45,9 @@
       autoria de album por artista OU banda).
 - [x] Entidade `Chart` (decisao 0010): esquema, nomenclatura uniforme e janela de
       apuracao (`resolveChartPeriod`: semanal seg-dom, mensal dia 1-ultimo). Factory
-      `standardCharts` + `npm run generate:charts`; 8 charts (mundial + Brasil, EUA,
-      Reino Unido). Estrutura pronta para expansao a novos paises.
+      `standardCharts` + `npm run generate:charts`. Estrutura de expansao exercitada:
+      paises Brasil, EUA, Reino Unido e Japao geram seus charts pela lista em
+      `tools/generate-charts.ts` (10 charts semeados).
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
       `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`).
 

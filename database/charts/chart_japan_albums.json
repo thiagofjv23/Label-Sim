@@ -1,0 +1,15 @@
+{
+  "id": "chart_japan_albums",
+  "type": "Chart",
+  "name": "Top 100 Japão (Álbuns)",
+  "description": "Chart nacional de álbuns.",
+  "scope": "Local",
+  "countryId": "country_japan",
+  "category": "Albums",
+  "size": 100,
+  "updateFrequency": "Monthly",
+  "usesSales": true,
+  "usesStreaming": false,
+  "usesRadio": false,
+  "prestige": 90
+}
