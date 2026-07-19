@@ -1,0 +1,115 @@
+{
+  "id": "band_titas",
+  "type": "Band",
+
+  "name": "Titãs",
+
+  "description": "Banda brasileira de rock formada em São Paulo, um dos principais nomes do rock nacional.",
+
+  "countryId": "country_brazil",
+
+  "formationDate": "1982-01-01",
+  "endDate": null,
+
+  "careerStatus": "Active",
+
+  "currentLabelId": "label_abril_music",
+  "managerId": null,
+
+  "genres": [
+    "genre_rock",
+    "genre_pop_rock",
+    "genre_new_wave"
+  ],
+
+  "members": [
+    {
+      "artistId": "artist_branco_mello",
+      "role": "Bass",
+      "startDate": "1982-01-01",
+      "endDate": null
+    },
+    {
+      "artistId": "artist_charles_gavin",
+      "role": "Drums",
+      "startDate": "1982-01-01",
+      "endDate": null
+    },
+    {
+      "artistId": "artist_paulo_miklos",
+      "role": "Vocals",
+      "startDate": "1982-01-01",
+      "endDate": null
+    },
+    {
+      "artistId": "artist_sergio_britto",
+      "role": "Vocals/Keyboards",
+      "startDate": "1982-01-01",
+      "endDate": null
+    },
+    {
+      "artistId": "artist_tony_bellotto",
+      "role": "Guitar",
+      "startDate": "1982-01-01",
+      "endDate": null
+    }
+  ],
+
+  "formerMembers": [
+    {
+      "artistId": "artist_arnaldo_antunes",
+      "role": "Vocals",
+      "startDate": "1982-01-01",
+      "endDate": "1992-01-01"
+    },
+    {
+      "artistId": "artist_nando_reis",
+      "role": "Bass/Vocals",
+      "startDate": "1982-01-01",
+      "endDate": "2002-09-05"
+    },
+    {
+      "artistId": "artist_marcelo_fromer",
+      "role": "Guitar",
+      "startDate": "1982-01-01",
+      "endDate": "2001-06-13"
+    }
+  ],
+
+  "albumIds": [
+    "album_titas_como_estao_voces"
+  ]
+}
+
+
+Campos finais da entidade Band
+Campo
+Descrição
+id
+Identificador único da banda.
+type
+Sempre "Band".
+name
+Nome artístico da banda.
+description
+Texto descritivo utilizado apenas pela interface.
+countryId
+País de origem da banda.
+formationDate
+Data de formação.
+endDate
+Data de encerramento (null se ativa).
+careerStatus
+Active, Hiatus ou Disbanded.
+currentLabelId
+Gravadora atual no início da simulação.
+managerId
+Empresário responsável (opcional).
+genres
+IDs dos gêneros musicais da banda.
+members
+Integrantes atuais, com função e período de participação.
+formerMembers
+Histórico de ex-integrantes.
+albumIds
+Álbuns lançados pela banda.
