@@ -1,0 +1,75 @@
+{
+  "id": "artist_pauline_croze",
+
+  "type": "Artist",
+  "nationality": "FRA",
+
+  "name": "Pauline Croze",
+  "stageName": "Pauline Croze",
+
+  "description": "Cantora e compositora francesa de sonoridade intimista, que mistura pop, folk e influências da bossa nova.",
+
+  "birthDate": "1979-04-01",
+  "birthPlace": {
+    "city": "Paris",
+    "state": "Île-de-France",
+    "country": "França"
+  },
+
+  "gender": "Female",
+
+  "careerStatus": "Active",
+  "careerStart": 2001,
+  "careerEnd": null,
+
+  "artistType": "Solo",
+
+  "currentLabelId": null,
+  "managerId": null,
+
+  "genreIds": [
+    "genre_folk",
+    "genre_pop"
+  ],
+
+  "skills": {
+    "composition": 78,
+    "vocals": 82,
+    "livePerformance": 74,
+    "musicianship": 72,
+    "charisma": 76
+  },
+
+  "commercial": {
+    "popularity": 28,
+    "prestige": 40,
+    "marketingPower": 30,
+    "mediaAppeal": 45,
+    "fanLoyalty": 55
+  },
+
+  "fanbase": {
+    "size": 40000,
+    "growth": "Growing",
+    "averageAge": 28
+  },
+
+  "careerStats": {
+    "albumsReleased": 0,
+    "songsReleased": 3,
+    "concertsPerformed": 60,
+    "awards": 0
+  },
+
+  "relationships": {
+    "bands": [],
+    "producers": [],
+    "collaborators": []
+  },
+
+  "flags": {
+    "isLegend": false,
+    "isHallOfFame": false,
+    "retired": false
+  }
+}

@@ -162,3 +162,24 @@ origem — primeiro uso de `country_western_europe` como `countryOfOriginId`.
 `FRA` (e demais ISO de `includedCountries`) **não** viram entidade. Pauline Croze,
 por exemplo, teria `nationality: "FRA"` (UI: francesa) e, via `resolveMarketCountry`,
 apareceria nos charts sob `country_western_europe`.
+
+---
+
+## 2026-07-19 — Artista `artist_pauline_croze` (exemplo francês)
+
+Gatilho: usuário pediu Pauline Croze como exemplo concreto de nacionalidade
+agregada. Primeiro artista **não brasileiro** e primeira artista **feminina** da
+base; primeiro caso real de `nationality` que resolve para um agregador.
+
+- `nationality: "FRA"` → UI mostra França; charts usam `country_western_europe`
+  (testado ponta a ponta em `tests/resolveMarketCountry.test.ts`).
+- **Estado calibrado a janeiro/2005** (início da simulação; estreia solo em
+  fev/2005): `careerStats.albumsReleased: 0`, popularidade baixa (28) mas não
+  nula, `fanbase.growth: "Growing"`, `careerStart: 2001` (participações anteriores
+  em projetos/bandas — "não totalmente desconhecida").
+- `genreIds`: `genre_folk`, `genre_pop`. `currentLabelId: null` (gravadora não
+  modelada).
+- Princípio 0004/0006 aplicado: o caráter "estreante" vive nas **estatísticas**;
+  a `description` é atemporal (estilo, não fase de carreira).
+- **Dados biográficos** (data e local de nascimento) são **placeholders a
+  verificar**, como nos demais artistas.

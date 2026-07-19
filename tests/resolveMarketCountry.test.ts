@@ -8,6 +8,7 @@ import {
   isAggregatorCountry,
 } from "../src/simulation/resolveMarketCountry.js";
 import type { Country } from "../src/entities/Country.js";
+import type { Artist } from "../src/entities/Artist.js";
 
 const DATABASE_DIR = fileURLToPath(new URL("../database", import.meta.url));
 
@@ -34,6 +35,17 @@ describe("resolveMarketCountry", () => {
   it("nacionalidade desconhecida resolve para undefined", () => {
     const countries = loadCountries();
     expect(resolveMarketCountry("XYZ", countries)).toBeUndefined();
+  });
+
+  it("Pauline Croze (nacionalidade FRA) aparece nos charts sob Western Europe", () => {
+    const world = new World();
+    loadSeedData(world, DATABASE_DIR);
+    const pauline = world.get("artist_pauline_croze") as Artist | undefined;
+    expect(pauline?.nationality).toBe("FRA");
+
+    const countries = world.ofType<Country>("Country");
+    const marketCountryId = resolveMarketCountryId(pauline!.nationality, countries);
+    expect(marketCountryId).toBe("country_western_europe");
   });
 
   it("identifica paises agregadores", () => {
