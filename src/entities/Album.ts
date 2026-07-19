@@ -18,8 +18,15 @@ export interface Album extends Entity {
   /** Titulo oficial no lancamento original (pode repetir `name`). */
   officialName: string;
 
-  /** Artista responsavel (referencia a `Artist`). */
-  artistId: EntityId;
+  /**
+   * Artista responsavel, quando o album e de um artista solo (referencia a
+   * `Artist`), ou `null` se for de uma banda. Exatamente um entre `artistId` e
+   * `bandId` e preenchido. Ver `docs/decisions/0009-autoria-album-artista-ou-banda.md`.
+   */
+  artistId: EntityId | null;
+
+  /** Banda responsavel, quando o album e de uma banda (referencia a `Band`), ou `null`. */
+  bandId: EntityId | null;
 
   albumType: AlbumType;
 

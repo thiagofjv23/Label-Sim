@@ -1,0 +1,26 @@
+{
+  "id": "genre_new_wave",
+
+  "type": "Genre",
+
+  "name": "New Wave",
+  "slug": "new_wave",
+
+  "countryOfOriginId": "country_usa",
+
+  "parentGenreId": null,
+  "subgenreIds": [],
+
+  "description": "Gênero surgido a partir do punk e do pós-punk, marcado pelo uso de sintetizadores, estética moderna e forte apelo pop.",
+
+  "typicalInstruments": [
+    "Sintetizador",
+    "Guitarra elétrica",
+    "Baixo elétrico",
+    "Bateria",
+    "Vocais"
+  ],
+
+  "activeFromYear": 1976,
+  "activeToYear": null
+}

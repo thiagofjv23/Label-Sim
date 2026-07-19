@@ -57,6 +57,7 @@ const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
   },
   Album: {
     artistId: "Artist",
+    bandId: "Band",
     countryId: "Country",
     labelId: "Label",
     genreIds: "Genre",
@@ -67,6 +68,13 @@ const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
     countryOfOriginId: "Country",
     parentGenreId: "Genre",
     subgenreIds: "Genre",
+  },
+  Band: {
+    countryId: "Country",
+    currentLabelId: "Label",
+    managerId: "Manager",
+    genreIds: "Genre",
+    albumIds: "Album",
   },
   Label: {
     countryId: "Country",

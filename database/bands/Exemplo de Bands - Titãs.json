@@ -1,5 +1,6 @@
 {
   "id": "band_titas",
+
   "type": "Band",
 
   "name": "Titãs",
@@ -16,7 +17,7 @@
   "currentLabelId": "label_abril_music",
   "managerId": null,
 
-  "genres": [
+  "genreIds": [
     "genre_rock",
     "genre_pop_rock",
     "genre_new_wave"
@@ -77,39 +78,6 @@
   ],
 
   "albumIds": [
-    "album_titas_como_estao_voces"
+    "album_titas_como_estao_voces_2003"
   ]
 }
-
-
-Campos finais da entidade Band
-Campo
-Descrição
-id
-Identificador único da banda.
-type
-Sempre "Band".
-name
-Nome artístico da banda.
-description
-Texto descritivo utilizado apenas pela interface.
-countryId
-País de origem da banda.
-formationDate
-Data de formação.
-endDate
-Data de encerramento (null se ativa).
-careerStatus
-Active, Hiatus ou Disbanded.
-currentLabelId
-Gravadora atual no início da simulação.
-managerId
-Empresário responsável (opcional).
-genres
-IDs dos gêneros musicais da banda.
-members
-Integrantes atuais, com função e período de participação.
-formerMembers
-Histórico de ex-integrantes.
-albumIds
-Álbuns lançados pela banda.

@@ -31,6 +31,11 @@ describe("SeedLoader", () => {
 
     const label = world.get("label_sony_music") as Label | undefined;
     expect(label?.relationships.artists).toContain("artist_roberto_carlos");
+
+    // Banda e um de seus integrantes carregam; a banda referencia seu album.
+    const band = world.get("band_titas");
+    expect(band?.type).toBe("Band");
+    expect(world.get("artist_tony_bellotto")?.type).toBe("Artist");
   });
 
   it("e deterministico na ordenacao (independe do sistema de arquivos)", () => {

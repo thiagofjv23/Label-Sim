@@ -1,0 +1,49 @@
+{
+  "id": "label_abril_music",
+
+  "type": "Label",
+
+  "name": "Abril Music",
+
+  "description": "Gravadora brasileira ligada a um grande grupo de mídia, atuante no lançamento de artistas nacionais de rock e pop.",
+
+  "countryId": "country_brazil",
+
+  "foundationYear": 1998,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 78,
+    "marketing": 82,
+    "distribution": 80,
+    "artistDevelopment": 76,
+    "financialPower": 80,
+    "industryInfluence": 72
+  },
+
+  "commercial": {
+    "budget": 25000000,
+    "marketShare": 8,
+    "activeArtists": 30,
+    "activeContracts": 35
+  },
+
+  "catalog": {
+    "songs": 4000,
+    "albums": 350
+  },
+
+  "relationships": {
+    "artists": [],
+    "bands": [
+      "band_titas"
+    ],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": false,
+    "acceptsDemos": true
+  }
+}

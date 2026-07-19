@@ -39,9 +39,12 @@
       implementa a heranca album -> musica.
 - [x] Exemplo de `Artist` Erasmo Carlos adicionado; `SeedLoader` passa a aceitar
       arquivo com array de entidades (decisao 0008). Resolve `artist_erasmo_carlos`.
+- [x] Entidade `Band` + exemplo `Titãs` e todos os seus elementos: label
+      `label_abril_music`, generos `genre_pop_rock`/`genre_new_wave`, 8 artistas
+      integrantes e o album `album_titas_como_estao_voces_2003` (decisao 0009:
+      autoria de album por artista OU banda).
 - [ ] Entidades ainda referenciadas sem arquivo (reportadas pela validacao):
-      `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`,
-      `label_universal_music`).
+      `Song` (faixas do album `Detalhes`), `Label` (`label_cbs_brasil`).
 - [x] Migrado `Artist.genres` (strings) para `genreIds` (referencias a `Genre`).
 - [x] Semeados `genre_rock`/`genre_pop` (origem EUA), paises `country_usa` e
       `country_uk`, e a label `label_universal_music` (Universal Music, Brasil).

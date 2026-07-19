@@ -1,0 +1,31 @@
+{
+  "id": "album_titas_como_estao_voces_2003",
+
+  "type": "Album",
+
+  "name": "Como Estão Vocês?",
+  "officialName": "Como Estão Vocês?",
+
+  "artistId": null,
+  "bandId": "band_titas",
+
+  "albumType": "studio",
+
+  "releaseDate": "2003-01-01",
+
+  "countryId": "country_brazil",
+  "labelId": "label_abril_music",
+
+  "genreIds": [
+    "genre_rock",
+    "genre_pop_rock"
+  ],
+
+  "themeId": null,
+
+  "language": "pt-BR",
+
+  "songIds": [],
+
+  "status": "released"
+}

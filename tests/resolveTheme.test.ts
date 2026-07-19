@@ -43,6 +43,7 @@ function makeAlbum(themeId: Album["themeId"]): Album {
     name: "X",
     officialName: "X",
     artistId: "artist_x",
+    bandId: null,
     albumType: "studio",
     releaseDate: "1990-01-01",
     countryId: "country_x",
