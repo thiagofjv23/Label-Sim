@@ -105,3 +105,35 @@ dailyCost representa o valor-base em 2005 e pode sofrer alterações econômicas
 O proprietário somente deve ser armazenado quando o estúdio pertencer a uma Label.
 Como o Mosh Studios não pertence a uma gravadora do jogo, o exemplo não possui ownerLabelId.
 Disponibilidade, reservas e ocupação não pertencem à entidade permanente; são estados dinâmicos administrados pelo sistema de sessões.
+
+---
+
+## Modelagem aplicada (implementação)
+
+- **Contrato:** `src/entities/RecordingStudio.ts` (`RecordingStudio`,
+  `StudioLocation`, `StudioTechnology`, `StudioService`, `StudioDailyCost`).
+  `description` é herdado da base `Entity` (opcional, apenas UI).
+- **Comportamento (lado sistema):** `src/systems/recordingStudio.ts`:
+  - `isStudioActive(studio, currentYear)` — dentro de `activeFromYear`..`activeToYear`;
+  - `studioOffersService(studio, service)`;
+  - `validateRecordingStudio(studio)` — faixas [0,100], anos, `dailyCost.amount > 0`,
+    prefixo do id, serviços não vazios.
+- **Validação de referências:** `location.countryId → Country` e (quando presente)
+  `ownerLabelId → Label`.
+- **`ownerLabelId` opcional:** só existe quando o estúdio pertence a uma `Label`.
+  O Mosh Studios é independente — não possui o campo.
+- **Instância:** `database/studios/Estudio Exemplo - Mosh Studios.json`
+  (`recording_studio_mosh`).
+- **Estático vs. dinâmico (0004):** `quality` é potencial permanente e não muda a
+  cada gravação; resultados por sessão pertencem à futura `RecordingSession`.
+
+## ToDo — a explorar posteriormente
+
+1. **`RecordingSession`** — sessões de gravação/mixagem/masterização que consomem
+   o estúdio; resultados por sessão (qualidade obtida, custo real) vivem aqui.
+2. **Fórmula de contribuição** `quality × studioQualityWeight`, limitada por
+   produtor, artista, orçamento e duração — no sistema de produção musical.
+3. **Custo dinâmico:** `dailyCost` é base de 2005; um sistema econômico pode
+   ajustá-lo ao longo do tempo.
+4. **Propriedade por gravadora** via `ownerLabelId` quando surgirem estúdios de
+   Label.

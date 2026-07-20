@@ -209,3 +209,19 @@ Gatilho: usuário subiu o template e as diretrizes de `Venue`.
 - Validação: `Venue.countryId → Country`, `Venue.genreAffinityIds → Genre`.
 - Diretrizes do usuário preservadas em `docs/03_Entities/Venue.md` (renomeadas de
   "Diretrizes para Venue") + seção de modelagem aplicada.
+
+---
+
+## 2026-07-19 — Entidade `RecordingStudio` + Mosh Studios (decisão 0016)
+
+Gatilho: usuário subiu as diretrizes de `RecordingStudio`.
+
+- Contrato `src/entities/RecordingStudio.ts` + helpers
+  `src/systems/recordingStudio.ts` (`isStudioActive`, `studioOffersService`,
+  `validateRecordingStudio`).
+- **`recording_studio_mosh`** criado como entidade real em
+  `database/studios/Estudio Exemplo - Mosh Studios.json` (independente — sem
+  `ownerLabelId`).
+- Validação: `location.countryId → Country`, `ownerLabelId → Label` (opcional).
+- Diretrizes preservadas em `docs/03_Entities/RecordingStudio.md` + modelagem
+  aplicada.

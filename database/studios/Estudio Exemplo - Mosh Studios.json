@@ -1,0 +1,34 @@
+{
+  "id": "recording_studio_mosh",
+
+  "type": "RecordingStudio",
+
+  "name": "Mosh Studios",
+  "description": "Estúdio profissional brasileiro de gravação, mixagem e masterização.",
+
+  "location": {
+    "city": "São Paulo",
+    "state": "São Paulo",
+    "countryId": "country_brazil"
+  },
+
+  "activeFromYear": 1979,
+  "activeToYear": null,
+
+  "quality": 88,
+  "facilities": 84,
+  "prestige": 82,
+
+  "technology": "Hybrid",
+
+  "services": [
+    "Recording",
+    "Mixing",
+    "Mastering"
+  ],
+
+  "dailyCost": {
+    "amount": 8000,
+    "currency": "BRL"
+  }
+}

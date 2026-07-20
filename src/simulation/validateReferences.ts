@@ -87,6 +87,10 @@ const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
     countryId: "Country",
     genreAffinityIds: "Genre",
   },
+  RecordingStudio: {
+    "location.countryId": "Country",
+    ownerLabelId: "Label",
+  },
   Label: {
     countryId: "Country",
     "relationships.artists": "Artist",

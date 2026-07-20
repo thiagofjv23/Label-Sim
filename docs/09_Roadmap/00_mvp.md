@@ -69,7 +69,11 @@
 - [x] Entidade `Venue` (decisão 0015): contrato + helpers (`isVenueAvailable`,
       tamanho de palco, `validateVenue`); Maracanã em `database/venues`; loader
       ignora `templates/`. Validação `countryId`/`genreAffinityIds`.
+- [x] Entidade `RecordingStudio` (decisão 0016): contrato + helpers
+      (`isStudioActive`, `studioOffersService`, `validateRecordingStudio`); Mosh
+      Studios em `database/studios`. Validação `location.countryId`/`ownerLabelId`.
 - [ ] Sistema de turnês: `Concert`, `Tour`, `Festival`, `LiveAlbum`, `City`.
+- [ ] `RecordingSession` (sessões de gravação; resultados dinâmicos).
 
 ## Fase 2 (previa) — Sistema de charts
 
