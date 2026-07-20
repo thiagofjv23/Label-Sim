@@ -56,3 +56,13 @@ npm run ui:preview
 ```
 
 O build da interface é gerado em `dist-ui/`. O build do motor permanece separado em `dist/`.
+
+## Publicação (GitHub Pages)
+
+O workflow `.github/workflows/deploy-ui.yml` builda a UI e publica no GitHub Pages
+a cada push (main ou branch de desenvolvimento). O `base` do Vite é relativo no
+build (`./`), então funciona no subcaminho do Pages.
+
+Passo único (no GitHub): **Settings → Pages → Source: "GitHub Actions"**. Depois,
+a URL do site aparece na aba **Actions** (job `deploy`) e em **Settings → Pages**
+— algo como `https://<usuario>.github.io/Label-Sim/`.
