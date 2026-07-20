@@ -104,4 +104,10 @@ Lancar -> Charts -> Receita -> Expandir.
 
 ## Fase 3 — UI observadora
 
-- [ ] Camada de UI que apenas le e renderiza o estado (nunca decide).
+- [x] Estrutura da UI (React + Vite) em `src/ui`: le a `database/` via
+      `import.meta.glob` e renderiza; nunca decide (alinhada ao guia de UI do
+      README). Doc em `docs/08_UI/00_estrutura_ui.md`. Comandos: `npm run ui`,
+      `ui:build`, `ui:preview` (saida em `dist-ui/`, separada do motor em `dist/`).
+      `templates/` excluido da carga da UI (alinhado a decisao 0015).
+- [ ] Ligar a UI aos resultados dos sistemas conforme forem criados (charts,
+      vendas, receita), mantendo pendentes o que a simulacao ainda nao produziu.
