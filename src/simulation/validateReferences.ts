@@ -91,6 +91,9 @@ const REFERENCE_FIELDS: Record<string, Record<string, string>> = {
     "location.countryId": "Country",
     ownerLabelId: "Label",
   },
+  MediaOutlet: {
+    countryId: "Country",
+  },
   Label: {
     countryId: "Country",
     "relationships.artists": "Artist",

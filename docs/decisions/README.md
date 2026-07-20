@@ -27,3 +27,4 @@ Formato: `NNNN-titulo-curto.md`, numeração sequencial.
 | 0014 | País agregador e nacionalidade de artista | Aceita |
 | 0015 | Entidade Venue; templates não são carregados | Aceita |
 | 0016 | Entidade RecordingStudio | Aceita |
+| 0017 | Entidade MediaOutlet (mídia) + edições/reservas | Aceita |

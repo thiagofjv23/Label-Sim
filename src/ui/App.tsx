@@ -25,6 +25,7 @@ import {
   Star,
   TrendingUp,
   Trophy,
+  Tv,
   Users,
   X,
   Zap,
@@ -38,6 +39,7 @@ import {
   entityName,
   formatMoney,
   formatNumber,
+  mediaTypeLabels,
   resolveName,
   type EntityRecord,
 } from "./data";
@@ -272,12 +274,19 @@ function NetworkPage({ onSelect }: { onSelect: (entity: EntityRecord) => void })
     { type: "Label", title: "Gravadoras", icon: Building2, copy: "Concorrentes, majors e subsidiárias" },
     { type: "RecordingStudio", title: "Estúdios", icon: Mic2, copy: "Qualidade, tecnologia e custos" },
     { type: "Venue", title: "Venues", icon: MapPin, copy: "Capacidade, prestígio e acústica" },
+    { type: "MediaOutlet", title: "Mídia", icon: Tv, copy: "Programas, rádios e publicações" },
     { type: "Genre", title: "Gêneros", icon: Music2, copy: "Afinidades e hierarquia musical" },
   ];
+  const groupIcon = (type: string) =>
+    type === "Label" ? <Building2 size={17} /> : type === "RecordingStudio" ? <Mic2 size={17} /> : type === "Venue" ? <MapPin size={17} /> : type === "MediaOutlet" ? <Tv size={17} /> : <Music2 size={17} />;
+  const groupSubtitle = (entity: EntityRecord): string =>
+    entity.type === "MediaOutlet"
+      ? mediaTypeLabels[String(entity.mediaType)] ?? String(entity.mediaType ?? "Veículo de mídia")
+      : String(entity.status ?? entity.technology ?? entity.city ?? entity.description ?? "Registro ativo");
   return <>
     <PageTitle eyebrow="REDE DA INDÚSTRIA" title="Estrutura" subtitle="Todos os ativos e agentes que sustentam a operação musical da simulação." />
     <div className="network-groups">
-      {groups.map(({ type, title, icon: Icon, copy }) => <Section key={type} title={title} kicker={`${byType(type).length} REGISTROS`} action={<span className="section-icon"><Icon size={19} /></span>}><p className="section-copy">{copy}</p><div className="compact-list">{byType(type).slice(0, 8).map((entity) => <button key={entity.id} onClick={() => onSelect(entity)}><span>{type === "Label" ? <Building2 size={17} /> : type === "RecordingStudio" ? <Mic2 size={17} /> : type === "Venue" ? <MapPin size={17} /> : <Music2 size={17} />}</span><div><strong>{entityName(entity)}</strong><small>{String(entity.status ?? entity.technology ?? entity.city ?? entity.description ?? "Registro ativo")}</small></div><ChevronRight size={16} /></button>)}</div></Section>)}
+      {groups.map(({ type, title, icon: Icon, copy }) => <Section key={type} title={title} kicker={`${byType(type).length} REGISTROS`} action={<span className="section-icon"><Icon size={19} /></span>}><p className="section-copy">{copy}</p><div className="compact-list">{byType(type).slice(0, 8).map((entity) => <button key={entity.id} onClick={() => onSelect(entity)}><span>{groupIcon(type)}</span><div><strong>{entityName(entity)}</strong><small>{groupSubtitle(entity)}</small></div><ChevronRight size={16} /></button>)}</div></Section>)}
     </div>
   </>;
 }
@@ -295,7 +304,7 @@ function ValueView({ value, depth = 0 }: { value: unknown; depth?: number }) {
 }
 
 function humanize(value: string): string {
-  const aliases: Record<string, string> = { id: "ID", type: "Tipo", currentLabelId: "Gravadora atual", genreIds: "Gêneros", artistId: "Artista", bandId: "Banda", labelId: "Gravadora", countryId: "Mercado", songIds: "Músicas", albumId: "Álbum", __source: "Arquivo de origem" };
+  const aliases: Record<string, string> = { id: "ID", type: "Tipo", currentLabelId: "Gravadora atual", genreIds: "Gêneros", artistId: "Artista", bandId: "Banda", labelId: "Gravadora", countryId: "Mercado", songIds: "Músicas", albumId: "Álbum", __source: "Arquivo de origem", mediaType: "Tipo de mídia", audienceReach: "Alcance", editionCapacity: "Vagas por edição", bookingRules: "Regras de reserva", appearanceTypes: "Tipos de aparição", supportedEntityTypes: "Aceita", availability: "Disponibilidade", activeFromYear: "Ativo desde", activeToYear: "Ativo até", bookingLeadDays: "Antecedência (dias)", prestige: "Prestígio", status: "Situação", frequency: "Frequência", weekDays: "Dias da semana", monthDays: "Dias do mês", months: "Meses", excludedDates: "Datas excluídas", minimumArtistPrestige: "Prestígio mín. do artista", minimumArtistPopularity: "Popularidade mín. (local)", minimumLabelPrestige: "Prestígio mín. da label" };
   return aliases[value] ?? value.replace(/([A-Z])/g, " $1").replace(/^./, (char) => char.toUpperCase());
 }
 
@@ -304,7 +313,7 @@ function Inspector({ entity, onClose }: { entity?: EntityRecord; onClose: () => 
   const entries = Object.entries(entity).filter(([key]) => !["name", "title", "stageName", "description", "type"].includes(key));
   return <><button className="inspector-scrim" onClick={onClose} aria-label="Fechar detalhes" /><aside className="inspector">
     <div className="inspector-top"><button className="icon-button" onClick={onClose}><X size={19} /></button><span>{entityLabels[entity.type] ?? entity.type}</span><button className="icon-button"><Star size={18} /></button></div>
-    <div className="inspector-hero"><span className="entity-mark">{entity.type === "Artist" ? <Mic2 /> : entity.type === "Album" || entity.type === "Song" ? <Disc3 /> : entity.type === "Country" ? <Globe2 /> : <Building2 />}</span><small>{entity.type.toUpperCase()}</small><h2>{entityName(entity)}</h2>{entity.description && <p>{entity.description}</p>}</div>
+    <div className="inspector-hero"><span className="entity-mark">{entity.type === "Artist" ? <Mic2 /> : entity.type === "Album" || entity.type === "Song" ? <Disc3 /> : entity.type === "Country" ? <Globe2 /> : entity.type === "MediaOutlet" ? <Tv /> : <Building2 />}</span><small>{entity.type.toUpperCase()}</small><h2>{entityName(entity)}</h2>{entity.description && <p>{entity.description}</p>}</div>
     <div className="inspector-body"><h3>DADOS COMPLETOS</h3>{entries.map(([key, value]) => <div className="detail-row" key={key}><label>{humanize(key)}</label><ValueView value={value} /></div>)}</div>
   </aside></>;
 }

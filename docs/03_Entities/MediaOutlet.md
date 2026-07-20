@@ -483,3 +483,50 @@ MediaEdition
 MediaBooking
     Representa a participação marcada pela label.
 Essa separação evita armazenar dados dinâmicos dentro da entidade permanente e permite que programas diários, semanais e revistas mensais utilizem exatamente o mesmo sistema.
+
+---
+
+## Modelagem aplicada (implementação)
+
+- **Contrato:** `src/entities/MediaOutlet.ts` — `MediaOutlet` + tipos aninhados
+  (`MediaAvailability`, `MediaBookingRules`) e uniões (`MediaType`,
+  `MediaOutletStatus`, `MediaFrequency`, `WeekDay`, `MediaAppearanceType`,
+  `MediaSupportedEntity`). Inclui também as entidades **dinâmicas** `MediaEdition`
+  e `MediaBooking` (geradas pelo sistema; não são dado semente).
+- **Sistema (agendamento):** `src/systems/media.ts`:
+  - `bookingScore` = `labelPrestige*0.30 + artistPrestige*0.30 + localArtistPopularity*0.40`;
+  - `requiredBookingScore` = `20 + prestige*0.70` (evita que o prestígio bruto
+    torne o veículo inacessível);
+  - `meetsBookingRequirement`, `isMediaOutletActive`, `availableSlots`,
+    `isBookingWindowOpen` (antecedência mínima), `validateMediaOutlet`.
+- **Validação de referências:** `MediaOutlet.countryId → Country`.
+- **Estático vs. dinâmico (0004):** `MediaOutlet` é permanente; edições e reservas
+  (agenda, vagas, resultados) vivem em `MediaEdition`/`MediaBooking`, calculadas
+  pelos sistemas. `availableSlots` é derivado, nunca armazenado.
+- **Instância:** `database/media/MediaOutlet Exemplo - Domingão do Faustão.json`.
+
+## Suporte na UI
+
+A UI já suporta a MediaOutlet:
+
+- `entityLabels.MediaOutlet = "Mídia"`; grupo **Mídia** na página **Estrutura**
+  (ícone de TV); tipo de mídia exibido em PT (`mediaTypeLabels`).
+- Painel de detalhes (Inspector) mostra todos os campos, com rótulos em PT
+  (`prestige→Prestígio`, `availability→Disponibilidade`, `frequency→Frequência`,
+  etc.) e referências resolvidas.
+- Ajuste geral: `entityName` passou a usar `display.name` para `Country`
+  (referências de mercado deixam de aparecer como `country_brazil` e mostram o
+  nome do país). Beneficia todas as entidades.
+
+## ToDo — a explorar posteriormente
+
+1. **Sistema de edições/reservas:** gerar `MediaEdition` no calendário conforme
+   `availability`; fluxo de `MediaBooking` (verificar ativo, vaga, prazo, tipo,
+   pontuação) e cálculo dos efeitos promocionais na data.
+2. **Calendário/Agenda na UI:** edições futuras; comportamento "escurecida"
+   quando a antecedência mínima já passou (não é mais possível reservar).
+3. **`bookingLeadDays` uniforme:** a spec sugere o mesmo valor para todas as
+   MediaOutlets (clareza ao jogador) — avaliar torná-lo constante global.
+4. **Localização de valores enum** (ex.: `TelevisionProgram`, `Weekly`, `Sunday`)
+   na UI — hoje as chaves estão em PT, os valores permanecem em inglês (comum a
+   todas as entidades; ligado à padronização de apresentação).

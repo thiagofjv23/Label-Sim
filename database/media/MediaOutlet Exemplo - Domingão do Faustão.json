@@ -1,0 +1,53 @@
+{
+  "id": "media_domingao_do_faustao",
+
+  "type": "MediaOutlet",
+
+  "name": "Domingão do Faustão",
+
+  "description": "Programa dominical de auditório e variedades da TV Globo, apresentado por Fausto Silva. Em 2005, era um dos espaços de maior exposição nacional para artistas divulgarem músicas, álbuns e suas próprias carreiras.",
+
+  "countryId": "country_brazil",
+
+  "mediaType": "TelevisionProgram",
+
+  "status": "Active",
+
+  "activeFromYear": 1989,
+  "activeToYear": 2021,
+
+  "prestige": 98,
+
+  "audienceReach": 97,
+
+  "availability": {
+    "frequency": "Weekly",
+    "weekDays": [
+      "Sunday"
+    ],
+    "monthDays": [],
+    "months": [],
+    "excludedDates": []
+  },
+
+  "editionCapacity": 2,
+
+  "bookingRules": {
+    "minimumArtistPrestige": 65,
+    "minimumArtistPopularity": 70,
+    "minimumLabelPrestige": 55,
+    "bookingLeadDays": 15
+  },
+
+  "appearanceTypes": [
+    "MusicalPerformance",
+    "Interview",
+    "ReleasePromotion",
+    "CareerPromotion"
+  ],
+
+  "supportedEntityTypes": [
+    "Artist",
+    "Band"
+  ]
+}

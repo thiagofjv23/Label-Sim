@@ -72,8 +72,13 @@
 - [x] Entidade `RecordingStudio` (decisão 0016): contrato + helpers
       (`isStudioActive`, `studioOffersService`, `validateRecordingStudio`); Mosh
       Studios em `database/studios`. Validação `location.countryId`/`ownerLabelId`.
+- [x] Entidade `MediaOutlet` (decisão 0017): contrato + `MediaEdition`/`MediaBooking`
+      + sistema de agendamento (`bookingScore`/`requiredBookingScore`); Domingão do
+      Faustão em `database/media`. UI ajustada (grupo Mídia + rótulos PT).
 - [ ] Sistema de turnês: `Concert`, `Tour`, `Festival`, `LiveAlbum`, `City`.
 - [ ] `RecordingSession` (sessões de gravação; resultados dinâmicos).
+- [ ] Sistema de mídia: geração de `MediaEdition` + fluxo de `MediaBooking` + UI
+      de agenda (edições, estado "escurecido" após a antecedência mínima).
 
 ## Fase 2 (previa) — Sistema de charts
 

@@ -43,7 +43,9 @@ export const byId = (id: unknown) => entities.find((entity) => entity.id === id)
 
 export function entityName(entity?: EntityRecord): string {
   if (!entity) return "Registro não localizado";
-  return entity.stageName ?? entity.name ?? entity.title ?? entity.id;
+  // Country nao tem `name` no topo; usa display.name (ex.: country_brazil -> "Brazil").
+  const display = entity.display as { name?: string } | undefined;
+  return entity.stageName ?? entity.name ?? entity.title ?? display?.name ?? entity.id;
 }
 
 export function resolveName(id: unknown): string {
@@ -72,4 +74,14 @@ export const entityLabels: Record<string, string> = {
   Theme: "Tema",
   RecordingStudio: "Estúdio",
   Venue: "Venue",
+  MediaOutlet: "Mídia",
+};
+
+/** Rotulos amigaveis (PT) para o tipo de MediaOutlet. */
+export const mediaTypeLabels: Record<string, string> = {
+  TelevisionProgram: "Programa de TV",
+  RadioProgram: "Programa de rádio",
+  Magazine: "Revista",
+  Newspaper: "Jornal",
+  Website: "Site",
 };

@@ -225,3 +225,20 @@ Gatilho: usuário subiu as diretrizes de `RecordingStudio`.
 - Validação: `location.countryId → Country`, `ownerLabelId → Label` (opcional).
 - Diretrizes preservadas em `docs/03_Entities/RecordingStudio.md` + modelagem
   aplicada.
+
+---
+
+## 2026-07-19 — Entidade `MediaOutlet` + Domingão do Faustão (decisão 0017)
+
+Gatilho: usuário subiu as diretrizes de `MediaOutlet`.
+
+- Contrato `src/entities/MediaOutlet.ts` (+ `MediaEdition`/`MediaBooking`
+  dinâmicas) + sistema `src/systems/media.ts` (pontuação de agendamento,
+  disponibilidade, validação).
+- **`media_domingao_do_faustao`** criado em
+  `database/media/MediaOutlet Exemplo - Domingão do Faustão.json`.
+- Validação: `MediaOutlet.countryId → Country`.
+- **UI ajustada** para exibir a mídia: grupo "Mídia" na Estrutura, rótulo,
+  `mediaTypeLabels`, aliases PT dos campos; e correção de `entityName` para
+  resolver `Country` por `display.name` (beneficia toda a UI).
+- Diretrizes preservadas em `docs/03_Entities/MediaOutlet.md` + modelagem aplicada.
