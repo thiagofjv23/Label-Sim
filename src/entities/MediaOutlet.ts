@@ -103,7 +103,13 @@ export interface MediaAvailability {
   excludedDates: string[];
 }
 
-/** Requisitos-base de agendamento (podem compor uma pontuacao combinada). */
+/**
+ * Requisitos-base de agendamento (podem compor uma pontuacao combinada).
+ *
+ * A antecedencia minima de reserva NAO fica aqui: e uniforme para todas as
+ * MediaOutlets (clareza ao jogador) e vive na constante global
+ * `MEDIA_BOOKING_LEAD_DAYS` (`src/systems/media.ts`). Ver decisao 0017.
+ */
 export interface MediaBookingRules {
   /** Prestigio minimo de referencia do artista/banda [0, 100]. */
   minimumArtistPrestige: number;
@@ -111,8 +117,6 @@ export interface MediaBookingRules {
   minimumArtistPopularity: number;
   /** Prestigio minimo de referencia da label [0, 100]. */
   minimumLabelPrestige: number;
-  /** Antecedencia minima (dias) para reservar. */
-  bookingLeadDays: number;
 }
 
 /**

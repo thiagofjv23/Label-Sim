@@ -242,3 +242,12 @@ Gatilho: usuário subiu as diretrizes de `MediaOutlet`.
   `mediaTypeLabels`, aliases PT dos campos; e correção de `entityName` para
   resolver `Country` por `display.name` (beneficia toda a UI).
 - Diretrizes preservadas em `docs/03_Entities/MediaOutlet.md` + modelagem aplicada.
+
+### Complemento — antecedência uniforme, geração de edições e Agenda na UI
+
+- `bookingLeadDays` removido da entidade → constante global
+  `MEDIA_BOOKING_LEAD_DAYS = 15` (uniforme para todas as mídias).
+- `src/systems/media.ts`: `generateEditions` (edições a partir de `availability`),
+  `evaluateBooking`/`createBooking` (fluxo de reserva com motivos de recusa).
+- UI: página **Agenda** lista as próximas edições; edições dentro do prazo mínimo
+  aparecem **escurecidas** ("Prazo encerrado"). Badge dinâmico na navegação.

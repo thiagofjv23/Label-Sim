@@ -35,8 +35,7 @@
   "bookingRules": {
     "minimumArtistPrestige": 65,
     "minimumArtistPopularity": 70,
-    "minimumLabelPrestige": 55,
-    "bookingLeadDays": 15
+    "minimumLabelPrestige": 55
   },
 
   "appearanceTypes": [

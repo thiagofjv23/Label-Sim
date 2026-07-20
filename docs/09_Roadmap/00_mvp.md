@@ -77,8 +77,11 @@
       Faustão em `database/media`. UI ajustada (grupo Mídia + rótulos PT).
 - [ ] Sistema de turnês: `Concert`, `Tour`, `Festival`, `LiveAlbum`, `City`.
 - [ ] `RecordingSession` (sessões de gravação; resultados dinâmicos).
-- [ ] Sistema de mídia: geração de `MediaEdition` + fluxo de `MediaBooking` + UI
-      de agenda (edições, estado "escurecido" após a antecedência mínima).
+- [x] Sistema de mídia (decisão 0017): `bookingLeadDays` uniforme (constante
+      global); geração de `MediaEdition` (`generateEditions`); fluxo de
+      `MediaBooking` (`evaluateBooking`/`createBooking`); UI de Agenda com estado
+      "escurecido" após a antecedência mínima.
+- [ ] Persistir edições/reservas no `World` + efeitos promocionais na data.
 
 ## Fase 2 (previa) — Sistema de charts
 

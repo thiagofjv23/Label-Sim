@@ -520,13 +520,13 @@ A UI já suporta a MediaOutlet:
 
 ## ToDo — a explorar posteriormente
 
-1. **Sistema de edições/reservas:** gerar `MediaEdition` no calendário conforme
-   `availability`; fluxo de `MediaBooking` (verificar ativo, vaga, prazo, tipo,
-   pontuação) e cálculo dos efeitos promocionais na data.
-2. **Calendário/Agenda na UI:** edições futuras; comportamento "escurecida"
-   quando a antecedência mínima já passou (não é mais possível reservar).
-3. **`bookingLeadDays` uniforme:** a spec sugere o mesmo valor para todas as
-   MediaOutlets (clareza ao jogador) — avaliar torná-lo constante global.
+1. **[FEITO]** `bookingLeadDays` uniforme → constante global
+   `MEDIA_BOOKING_LEAD_DAYS = 15` (decisão 0017).
+2. **[FEITO]** Geração de `MediaEdition` (`generateEditions`) + fluxo de
+   `MediaBooking` (`evaluateBooking`/`createBooking`) + **Agenda na UI** com o
+   estado "escurecido" após o prazo mínimo.
+3. **Persistir/efeitos:** guardar edições e reservas no `World` durante a
+   simulação e calcular os efeitos promocionais na data da edição.
 4. **Localização de valores enum** (ex.: `TelevisionProgram`, `Weekly`, `Sunday`)
    na UI — hoje as chaves estão em PT, os valores permanecem em inglês (comum a
    todas as entidades; ligado à padronização de apresentação).

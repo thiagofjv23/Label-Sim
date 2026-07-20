@@ -43,8 +43,37 @@ import {
   resolveName,
   type EntityRecord,
 } from "./data";
+import { GameDate } from "../engine/time/GameDate";
+import { generateEditions, isBookingWindowOpen, MEDIA_BOOKING_LEAD_DAYS } from "../systems/media";
+import type { MediaOutlet } from "../entities/MediaOutlet";
 
-type Page = "home" | "talent" | "releases" | "charts" | "markets" | "network";
+type Page = "home" | "talent" | "releases" | "charts" | "markets" | "network" | "agenda";
+
+/** Data atual da simulacao exibida pela UI (inicio: 03 JAN 2005). */
+const SIM_DATE = GameDate.fromCalendar(2005, 1, 3);
+/** Horizonte da agenda de midia (dias a frente). */
+const AGENDA_HORIZON_DAYS = 56;
+const MONTHS_PT = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+
+/** Uma edicao futura de midia, com estado de reserva para exibicao. */
+type EditionRow = { outlet: EntityRecord; date: string; daysUntil: number; capacity: number; bookable: boolean };
+
+/** Gera as proximas edicoes de todas as MediaOutlets, em ordem cronologica. */
+function upcomingEditions(): EditionRow[] {
+  const to = SIM_DATE.addDays(AGENDA_HORIZON_DAYS);
+  const rows: EditionRow[] = [];
+  for (const outlet of byType("MediaOutlet")) {
+    for (const edition of generateEditions(outlet as unknown as MediaOutlet, SIM_DATE, to)) {
+      const [year, month, day] = edition.date.split("-").map(Number);
+      const daysUntil = GameDate.fromCalendar(year, month, day).toDayIndex() - SIM_DATE.toDayIndex();
+      rows.push({ outlet, date: edition.date, daysUntil, capacity: edition.capacity, bookable: isBookingWindowOpen(daysUntil) });
+    }
+  }
+  return rows.sort((a, b) => a.date.localeCompare(b.date));
+}
+
+const mediaEditionRows = upcomingEditions();
+const agendaOpenCount = mediaEditionRows.filter((row) => row.bookable).length;
 
 type NavItem = { id: Page; label: string; icon: LucideIcon };
 
@@ -101,7 +130,7 @@ function SideNav({ page, open, onClose, onPage }: { page: Page; open: boolean; o
           })}
           <small className="nav-label">OPERAÇÃO</small>
           <button onClick={() => { onPage("network"); onClose(); }} className={page === "network" ? "active" : ""}><Factory size={19} /><span>Estrutura</span></button>
-          <button><CalendarDays size={19} /><span>Agenda</span><em>4</em></button>
+          <button onClick={() => { onPage("agenda"); onClose(); }} className={page === "agenda" ? "active" : ""}><CalendarDays size={19} /><span>Agenda</span>{agendaOpenCount > 0 && <em>{agendaOpenCount}</em>}{page === "agenda" && <i />}</button>
           <button><CircleDollarSign size={19} /><span>Finanças</span></button>
         </nav>
         <div className="sim-controls">
@@ -291,6 +320,26 @@ function NetworkPage({ onSelect }: { onSelect: (entity: EntityRecord) => void })
   </>;
 }
 
+function AgendaPage({ onSelect }: { onSelect: (entity: EntityRecord) => void }) {
+  return <>
+    <PageTitle eyebrow="OPERAÇÃO · CALENDÁRIO" title="Agenda de mídia" subtitle={`Próximas edições de mídia a partir de 03 JAN 2005. ${agendaOpenCount} abertas para reserva; as demais já passaram do prazo mínimo de ${MEDIA_BOOKING_LEAD_DAYS} dias.`} action={<button className="secondary-action"><Tv size={17} /> Ver veículos</button>} />
+    {mediaEditionRows.length === 0 ? <p className="section-copy">Nenhuma edição de mídia no horizonte atual.</p> :
+    <div className="edition-list">
+      {mediaEditionRows.map((row) => {
+        const day = row.date.slice(8, 10);
+        const month = MONTHS_PT[Number(row.date.slice(5, 7)) - 1];
+        const mediaType = mediaTypeLabels[String(row.outlet.mediaType)] ?? String(row.outlet.mediaType ?? "Mídia");
+        return <button key={`${row.outlet.id}-${row.date}`} className={`edition-row ${row.bookable ? "" : "is-locked"}`} onClick={() => onSelect(row.outlet)}>
+          <time>{day}<small>{month}</small></time>
+          <div className="edition-main"><strong>{entityName(row.outlet)}</strong><small>{mediaType} · {row.capacity} vaga(s) por edição</small></div>
+          <span className={`status ${row.bookable ? "released" : "waiting"}`}>{row.bookable ? `Reserva aberta · faltam ${row.daysUntil}d` : "Prazo encerrado"}</span>
+          <ChevronRight size={17} />
+        </button>;
+      })}
+    </div>}
+  </>;
+}
+
 function ValueView({ value, depth = 0 }: { value: unknown; depth?: number }) {
   if (value === null || value === undefined) return <span className="empty-value">Não informado</span>;
   if (typeof value === "boolean") return <span className={`boolean ${value ? "yes" : "no"}`}>{value ? "Sim" : "Não"}</span>;
@@ -343,7 +392,8 @@ export function App() {
       : page === "releases" ? <ReleasesPage onSelect={setSelected} />
         : page === "charts" ? <ChartsPage onSelect={setSelected} />
           : page === "markets" ? <MarketsPage onSelect={setSelected} />
-            : <NetworkPage onSelect={setSelected} />;
+            : page === "agenda" ? <AgendaPage onSelect={setSelected} />
+              : <NetworkPage onSelect={setSelected} />;
 
   return <div className="app-shell">
     <AppHeader onMenu={() => setMenuOpen(true)} onSearch={() => setSearchOpen(true)} onSelect={setSelected} />
