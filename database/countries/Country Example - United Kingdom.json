@@ -1,0 +1,62 @@
+{
+  "id": "country_uk",
+
+  "type": "Country",
+
+  "display": {
+    "name": "United Kingdom",
+    "shortName": "UK",
+    "adjective": "British",
+    "flag": "🇬🇧",
+    "color": "#012169"
+  },
+
+  "officialName": "United Kingdom of Great Britain and Northern Ireland",
+  "isoCode": "GBR",
+
+  "description": "País europeu com forte tradição musical e grande influência na música pop e rock em escala mundial.",
+
+  "continent": "Europe",
+  "capital": "London",
+
+  "population": 60000000,
+  "language": "English",
+  "currency": "Pound Sterling",
+
+  "marketSize": 88,
+  "economicStrength": 90,
+  "musicCulture": 95,
+  "mediaStrength": 92,
+  "tourInfrastructure": 90,
+  "piracyLevel": 40,
+  "digitalAdoption": 42,
+
+  "genreAffinity": {
+    "Pop": 92,
+    "Rock": 90,
+    "Electronic": 82,
+    "Metal": 70,
+    "Hip Hop": 68,
+    "Jazz": 66,
+    "Gospel": 45,
+    "MPB": 8
+  },
+
+  "radioInfluence": 85,
+  "tvInfluence": 85,
+  "internetInfluence": 38,
+
+  "domesticMusicPreference": 70,
+  "internationalMusicPreference": 60,
+
+  "liveMusicDemand": 88,
+  "physicalMediaDemand": 82,
+  "digitalStreamingDemand": 22,
+
+  "festivalCulture": 92,
+  "awardPrestige": 88,
+
+  "activeLabels": [],
+  "mainCharts": [],
+  "mainRadioNetworks": []
+}

@@ -1,0 +1,49 @@
+{
+  "id": "label_bmg_brazil",
+
+  "type": "Label",
+
+  "name": "BMG",
+
+  "brandTag": "bmg",
+
+  "description": "Gravadora fonográfica multinacional de grande porte, atuante no mercado brasileiro.",
+
+  "countryId": "country_brazil",
+
+  "foundationYear": 1987,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 84,
+    "marketing": 82,
+    "distribution": 83,
+    "artistDevelopment": 80,
+    "financialPower": 84,
+    "industryInfluence": 82
+  },
+
+  "commercial": {
+    "budget": 42000000,
+    "marketShare": 13,
+    "activeArtists": 65,
+    "activeContracts": 75
+  },
+
+  "catalog": {
+    "songs": 42000,
+    "albums": 5200
+  },
+
+  "relationships": {
+    "artists": [],
+    "bands": [],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": true,
+    "acceptsDemos": false
+  }
+}

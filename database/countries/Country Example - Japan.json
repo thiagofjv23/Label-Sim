@@ -1,0 +1,75 @@
+{
+  "id": "country_japan",
+
+  "type": "Country",
+
+  "display": {
+    "name": "Japan",
+    "shortName": "Japan",
+    "adjective": "Japanese",
+    "flag": "🇯🇵",
+    "color": "#BC002D"
+  },
+
+  "officialName": "Japan",
+  "isoCode": "JPN",
+
+  "description": "País do Leste Asiático com uma das maiores indústrias fonográficas do mundo, caracterizada pelo forte consumo de mídia física, preferência por artistas nacionais e uma indústria musical altamente desenvolvida.",
+
+  "continent": "Asia",
+  "capital": "Tokyo",
+
+  "population": 127800000,
+  "language": "Japanese",
+  "currency": "Japanese Yen",
+
+  "marketSize": 97,
+  "economicStrength": 92,
+  "musicCulture": 97,
+  "mediaStrength": 96,
+  "tourInfrastructure": 94,
+  "piracyLevel": 20,
+  "digitalAdoption": 55,
+
+  "genreAffinity": {
+    "J-Pop": 98,
+    "Idol Pop": 94,
+    "Pop": 90,
+    "Rock": 88,
+    "J-Rock": 88,
+    "Electronic": 78,
+    "R&B": 72,
+    "Hip Hop": 68,
+    "Metal": 66,
+    "Enka": 62,
+    "Classical": 60,
+    "Jazz": 58,
+    "Dance": 76,
+    "Visual Kei": 83,
+    "MPB": 8
+  },
+
+  "radioInfluence": 75,
+  "tvInfluence": 96,
+  "internetInfluence": 35,
+
+  "domesticMusicPreference": 95,
+  "internationalMusicPreference": 32,
+
+  "liveMusicDemand": 88,
+  "physicalMediaDemand": 98,
+  "digitalStreamingDemand": 5,
+
+  "festivalCulture": 78,
+  "awardPrestige": 82,
+
+  "activeLabels": [
+    "label_sony_music_entertainment_japan",
+    "label_avex_group",
+    "label_universal_music_japan"
+  ],
+
+  "mainCharts": [],
+
+  "mainRadioNetworks": []
+}

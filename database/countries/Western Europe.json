@@ -1,0 +1,101 @@
+{
+  "id": "country_western_europe",
+
+  "type": "Country",
+
+  "display": {
+    "name": "Western Europe",
+    "shortName": "Western Europe",
+    "adjective": "Western European",
+    "flag": "🇪🇺",
+    "color": "#003399"
+  },
+
+  "officialName": "Western European Music Market",
+  "isoCode": "WEU",
+
+  "description": "Mercado musical agregado que representa os países da Europa Ocidental continental e os países nórdicos para fins de popularidade, vendas, mídia e atividade comercial. Reúne algumas das maiores indústrias fonográficas do mundo, com forte consumo de música física, ampla infraestrutura de turnês e circulação significativa de artistas entre os países integrantes.",
+
+  "continent": "Europe",
+  "capital": null,
+
+  "includedCountries": [
+    "AUT",
+    "BEL",
+    "DNK",
+    "FIN",
+    "FRA",
+    "DEU",
+    "ISL",
+    "ITA",
+    "LUX",
+    "NLD",
+    "NOR",
+    "PRT",
+    "ESP",
+    "SWE",
+    "CHE"
+  ],
+
+  "population": 331000000,
+  "language": "Multiple",
+  "currency": "Multiple",
+
+  "marketSize": 99,
+  "economicStrength": 91,
+  "musicCulture": 96,
+  "mediaStrength": 93,
+  "tourInfrastructure": 96,
+  "piracyLevel": 32,
+  "digitalAdoption": 48,
+
+  "genreAffinity": {
+    "Pop": 94,
+    "Rock": 93,
+    "Electronic": 91,
+    "Dance": 89,
+    "Alternative Rock": 86,
+    "Metal": 82,
+    "Hip Hop": 76,
+    "R&B": 74,
+    "Classical": 81,
+    "Jazz": 72,
+    "Folk": 70,
+    "Indie Rock": 84,
+    "Eurodance": 83,
+    "House": 86,
+    "Techno": 84,
+    "Latin Pop": 66,
+    "Reggae": 61,
+    "Country": 30,
+    "Gospel": 28,
+    "MPB": 20
+  },
+
+  "radioInfluence": 88,
+  "tvInfluence": 87,
+  "internetInfluence": 42,
+
+  "domesticMusicPreference": 80,
+  "internationalMusicPreference": 78,
+
+  "liveMusicDemand": 93,
+  "physicalMediaDemand": 88,
+  "digitalStreamingDemand": 8,
+
+  "festivalCulture": 95,
+  "awardPrestige": 87,
+
+  "activeLabels": [
+    "label_universal_music_group",
+    "label_sony_bmg_music_entertainment",
+    "label_emi_group"
+  ],
+
+  "mainCharts": [
+    "chart_western_europe_singles",
+    "chart_western_europe_albums"
+  ],
+
+  "mainRadioNetworks": []
+}

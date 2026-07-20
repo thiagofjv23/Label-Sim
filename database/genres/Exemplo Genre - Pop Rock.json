@@ -1,0 +1,26 @@
+{
+  "id": "genre_pop_rock",
+
+  "type": "Genre",
+
+  "name": "Pop Rock",
+  "slug": "pop_rock",
+
+  "countryOfOriginId": "country_usa",
+
+  "parentGenreId": null,
+  "subgenreIds": [],
+
+  "description": "Gênero que combina a energia do rock com a acessibilidade melódica do pop, priorizando refrões marcantes e produção voltada ao grande público.",
+
+  "typicalInstruments": [
+    "Guitarra elétrica",
+    "Baixo elétrico",
+    "Bateria",
+    "Teclado",
+    "Vocais"
+  ],
+
+  "activeFromYear": 1966,
+  "activeToYear": null
+}

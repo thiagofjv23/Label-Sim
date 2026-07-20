@@ -1,0 +1,49 @@
+{
+  "id": "label_sony_bmg_music_entertainment",
+
+  "type": "Label",
+
+  "name": "Sony BMG Music Entertainment",
+
+  "brandTag": "sony",
+
+  "description": "Grande grupo fonográfico global resultante da união das operações de música da Sony e da BMG, matriz de suas subsidiárias por país.",
+
+  "countryId": "country_western_europe",
+
+  "foundationYear": 2004,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 98,
+    "marketing": 97,
+    "distribution": 99,
+    "artistDevelopment": 95,
+    "financialPower": 99,
+    "industryInfluence": 99
+  },
+
+  "commercial": {
+    "budget": 280000000,
+    "marketShare": 25,
+    "activeArtists": 380,
+    "activeContracts": 440
+  },
+
+  "catalog": {
+    "songs": 290000,
+    "albums": 38000
+  },
+
+  "relationships": {
+    "artists": [],
+    "bands": [],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": true,
+    "acceptsDemos": false
+  }
+}

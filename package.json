@@ -1,0 +1,35 @@
+{
+  "name": "chartwarsbrasil",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Simulacao de gestao de gravadora musical (Label-Sim). Motor de simulacao baseado em ticks.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "ui": "vite",
+    "ui:build": "vite build",
+    "ui:preview": "vite preview",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "generate:charts": "tsx tools/generate-charts.ts"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "vite": "^6.4.3",
+    "vitest": "^1.4.0"
+  }
+}

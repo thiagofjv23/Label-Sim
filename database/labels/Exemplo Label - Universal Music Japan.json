@@ -1,0 +1,49 @@
+{
+  "id": "label_universal_music_japan",
+
+  "type": "Label",
+
+  "name": "Universal Music Japan",
+
+  "brandTag": "universal",
+
+  "description": "Braço japonês de um dos maiores grupos fonográficos do mundo, atuante no mercado doméstico do Japão.",
+
+  "countryId": "country_japan",
+
+  "foundationYear": 1998,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 90,
+    "marketing": 88,
+    "distribution": 90,
+    "artistDevelopment": 85,
+    "financialPower": 92,
+    "industryInfluence": 88
+  },
+
+  "commercial": {
+    "budget": 60000000,
+    "marketShare": 12,
+    "activeArtists": 80,
+    "activeContracts": 95
+  },
+
+  "catalog": {
+    "songs": 40000,
+    "albums": 6000
+  },
+
+  "relationships": {
+    "artists": [],
+    "bands": [],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": true,
+    "acceptsDemos": false
+  }
+}

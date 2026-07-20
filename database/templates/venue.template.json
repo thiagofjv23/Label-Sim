@@ -1,0 +1,49 @@
+{
+  "id": "venue_example",
+  "type": "Venue",
+
+  "name": "Example Venue",
+  "description": "Descrição curta do local.",
+
+  "venueType": "Arena",
+
+  "countryId": "country_example",
+  "state": null,
+  "city": "Example City",
+
+  "openedYear": 1980,
+  "closedYear": null,
+
+  "capacity": {
+    "concert": 15000,
+    "seatedConcert": 10000
+  },
+
+  "stage": {
+    "builtIn": true,
+    "maxStageSize": "Large",
+    "roof": true,
+    "acousticQuality": 80
+  },
+
+  "facilities": 85,
+
+  "allowedEventTypes": [
+    "Concert",
+    "Festival",
+    "Award",
+    "Promotional"
+  ],
+
+  "genreAffinityIds": [],
+
+  "marketImportance": 75,
+  "prestige": 70,
+  "operatingCost": 72,
+  "bookingDifficulty": 68,
+
+  "defaultTicketPriceMultiplier": 1,
+
+  "indoor": true,
+  "active": true
+}

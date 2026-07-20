@@ -1,0 +1,51 @@
+{
+  "id": "label_universal_music",
+
+  "type": "Label",
+
+  "name": "Universal Music",
+
+  "brandTag": "universal",
+
+  "description": "Gravadora fonográfica multinacional, um dos maiores grupos da indústria musical global, atuante no mercado brasileiro.",
+
+  "countryId": "country_brazil",
+
+  "foundationYear": 1998,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 98,
+    "marketing": 99,
+    "distribution": 100,
+    "artistDevelopment": 96,
+    "financialPower": 100,
+    "industryInfluence": 100
+  },
+
+  "commercial": {
+    "budget": 120000000,
+    "marketShare": 32,
+    "activeArtists": 140,
+    "activeContracts": 165
+  },
+
+  "catalog": {
+    "songs": 95000,
+    "albums": 14000
+  },
+
+  "relationships": {
+    "artists": [
+      "artist_erasmo_carlos"
+    ],
+    "bands": [],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": true,
+    "acceptsDemos": false
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "label_som_livre",
+
+  "type": "Label",
+
+  "name": "Som Livre",
+
+  "description": "Gravadora brasileira ligada a um grande grupo de mídia, forte em trilhas de novelas e artistas populares nacionais.",
+
+  "countryId": "country_brazil",
+
+  "foundationYear": 1969,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 88,
+    "marketing": 92,
+    "distribution": 90,
+    "artistDevelopment": 78,
+    "financialPower": 85,
+    "industryInfluence": 88
+  },
+
+  "commercial": {
+    "budget": 45000000,
+    "marketShare": 15,
+    "activeArtists": 70,
+    "activeContracts": 80
+  },
+
+  "catalog": {
+    "songs": 35000,
+    "albums": 4500
+  },
+
+  "relationships": {
+    "artists": [],
+    "bands": [],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": false,
+    "acceptsDemos": true
+  }
+}

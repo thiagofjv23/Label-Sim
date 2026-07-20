@@ -1,0 +1,84 @@
+{
+  "id": "country_brazil",
+
+  "type": "Country",
+
+  "display": {
+    "name": "Brazil",
+    "shortName": "Brazil",
+    "adjective": "Brazilian",
+    "flag": "🇧🇷",
+    "color": "#009739"
+  },
+
+  "officialName": "Federative Republic of Brazil",
+  "isoCode": "BRA",
+
+  "description": "Maior país da América do Sul, reconhecido por sua diversidade cultural e forte tradição musical.",
+
+  "continent": "South America",
+  "capital": "Brasília",
+
+  "population": 183987291,
+  "language": "Portuguese",
+  "currency": "Brazilian Real",
+
+  "marketSize": 95,
+  "economicStrength": 72,
+  "musicCulture": 100,
+  "mediaStrength": 92,
+  "tourInfrastructure": 82,
+  "piracyLevel": 78,
+  "digitalAdoption": 18,
+
+  "genreAffinity": {
+    "MPB": 100,
+    "Sertanejo": 98,
+    "Pagode": 95,
+    "Samba": 100,
+    "Axé": 90,
+    "Forró": 92,
+    "Rock": 75,
+    "Pop": 80,
+    "Hip Hop": 60,
+    "Electronic": 45,
+    "Metal": 50,
+    "Gospel": 85
+  },
+
+  "radioInfluence": 95,
+  "tvInfluence": 98,
+  "internetInfluence": 12,
+
+  "domesticMusicPreference": 90,
+  "internationalMusicPreference": 55,
+
+  "liveMusicDemand": 88,
+  "physicalMediaDemand": 96,
+  "digitalStreamingDemand": 4,
+
+  "festivalCulture": 95,
+  "awardPrestige": 75,
+
+  "activeLabels": [
+    "label_sony_music",
+    "label_universal_music",
+    "label_emi_brazil",
+    "label_bmg_brazil",
+    "label_som_livre"
+  ],
+
+  "mainCharts": [
+    "chart_brazil_singles",
+    "chart_brazil_albums"
+  ],
+
+  "mainRadioNetworks": [
+    "jovem_pan_fm",
+    "transamerica_fm",
+    "89_fm",
+    "mix_fm",
+    "band_fm",
+    "gazeta_fm"
+  ]
+}

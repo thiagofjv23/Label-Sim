@@ -1,0 +1,26 @@
+{
+  "id": "genre_mpb",
+
+  "type": "Genre",
+
+  "name": "MPB",
+  "slug": "mpb",
+
+  "countryOfOriginId": "country_brazil",
+
+  "parentGenreId": null,
+  "subgenreIds": [],
+
+  "description": "Gênero musical brasileiro surgido na década de 1960 que combina elementos da bossa nova, samba, folk e outros estilos nacionais, caracterizado pela valorização da composição e da interpretação.",
+
+  "typicalInstruments": [
+    "Violão",
+    "Piano",
+    "Baixo",
+    "Bateria",
+    "Percussão"
+  ],
+
+  "activeFromYear": 1965,
+  "activeToYear": null
+}

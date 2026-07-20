@@ -1,0 +1,155 @@
+[
+  {
+    "id": "artist_roberto_carlos",
+    "type": "Artist",
+    "nationality": "BRA",
+
+    "name": "Roberto Carlos Braga",
+    "stageName": "Roberto Carlos",
+
+    "description": "Cantor e compositor brasileiro considerado um dos maiores nomes da música popular brasileira.",
+
+    "birthDate": "1941-04-19",
+    "birthPlace": {
+      "city": "Cachoeiro de Itapemirim",
+      "state": "Espírito Santo",
+      "country": "Brasil"
+    },
+
+    "gender": "Male",
+
+    "careerStatus": "Active",
+    "careerStart": 1959,
+    "careerEnd": null,
+
+    "artistType": "Solo",
+
+    "currentLabelId": "label_sony_music",
+    "managerId": null,
+
+    "genreIds": [
+      "genre_mpb",
+      "genre_pop"
+    ],
+
+    "skills": {
+      "composition": 96,
+      "vocals": 95,
+      "livePerformance": 92,
+      "musicianship": 80,
+      "charisma": 99
+    },
+
+    "commercial": {
+      "popularity": 99,
+      "prestige": 100,
+      "marketingPower": 98,
+      "mediaAppeal": 98,
+      "fanLoyalty": 100
+    },
+
+    "fanbase": {
+      "size": 9800000,
+      "growth": "Stable",
+      "averageAge": 52
+    },
+
+    "careerStats": {
+      "albumsReleased": 45,
+      "songsReleased": 600,
+      "concertsPerformed": 4500,
+      "awards": 120
+    },
+
+    "relationships": {
+      "bands": [],
+      "producers": [],
+      "collaborators": [
+        "artist_erasmo_carlos"
+      ]
+    },
+
+    "flags": {
+      "isLegend": true,
+      "isHallOfFame": true,
+      "retired": false
+    }
+  },
+  {
+    "id": "artist_erasmo_carlos",
+    "type": "Artist",
+    "nationality": "BRA",
+
+    "name": "Erasmo Esteves",
+    "stageName": "Erasmo Carlos",
+
+    "description": "Cantor, compositor e multi-instrumentista brasileiro, um dos principais pioneiros do rock nacional e da Jovem Guarda.",
+
+    "birthDate": "1941-06-05",
+    "birthPlace": {
+      "city": "Rio de Janeiro",
+      "state": "Rio de Janeiro",
+      "country": "Brasil"
+    },
+
+    "gender": "Male",
+
+    "careerStatus": "Active",
+    "careerStart": 1957,
+    "careerEnd": null,
+
+    "artistType": "Solo",
+
+    "currentLabelId": "label_universal_music",
+    "managerId": null,
+
+    "genreIds": [
+      "genre_rock",
+      "genre_mpb",
+      "genre_pop"
+    ],
+
+    "skills": {
+      "composition": 98,
+      "vocals": 88,
+      "livePerformance": 90,
+      "musicianship": 90,
+      "charisma": 94
+    },
+
+    "commercial": {
+      "popularity": 90,
+      "prestige": 98,
+      "marketingPower": 85,
+      "mediaAppeal": 89,
+      "fanLoyalty": 96
+    },
+
+    "fanbase": {
+      "size": 4600000,
+      "growth": "Stable",
+      "averageAge": 48
+    },
+
+    "careerStats": {
+      "albumsReleased": 33,
+      "songsReleased": 700,
+      "concertsPerformed": 3200,
+      "awards": 65
+    },
+
+    "relationships": {
+      "bands": [],
+      "producers": [],
+      "collaborators": [
+        "artist_roberto_carlos"
+      ]
+    },
+
+    "flags": {
+      "isLegend": true,
+      "isHallOfFame": true,
+      "retired": false
+    }
+  }
+]

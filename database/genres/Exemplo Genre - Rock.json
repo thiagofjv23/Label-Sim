@@ -1,0 +1,25 @@
+{
+  "id": "genre_rock",
+
+  "type": "Genre",
+
+  "name": "Rock",
+  "slug": "rock",
+
+  "countryOfOriginId": "country_usa",
+
+  "parentGenreId": null,
+  "subgenreIds": [],
+
+  "description": "Gênero musical marcado por guitarras elétricas, forte presença rítmica de baixo e bateria e vocais expressivos, surgido a partir do rock and roll.",
+
+  "typicalInstruments": [
+    "Guitarra elétrica",
+    "Baixo elétrico",
+    "Bateria",
+    "Vocais"
+  ],
+
+  "activeFromYear": 1955,
+  "activeToYear": null
+}

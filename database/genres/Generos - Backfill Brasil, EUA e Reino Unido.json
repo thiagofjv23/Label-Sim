@@ -1,0 +1,93 @@
+[
+  {
+    "id": "genre_samba",
+    "type": "Genre",
+    "name": "Samba",
+    "slug": "samba",
+    "countryOfOriginId": "country_brazil",
+    "parentGenreId": null,
+    "subgenreIds": [],
+    "description": "Gênero brasileiro de raiz afro-brasileira, símbolo nacional, marcado pelo ritmo sincopado e pela percussão.",
+    "typicalInstruments": ["Cavaquinho", "Pandeiro", "Surdo", "Violão", "Tamborim", "Vocais"],
+    "activeFromYear": 1917,
+    "activeToYear": null
+  },
+  {
+    "id": "genre_pagode",
+    "type": "Genre",
+    "name": "Pagode",
+    "slug": "pagode",
+    "countryOfOriginId": "country_brazil",
+    "parentGenreId": null,
+    "subgenreIds": [],
+    "description": "Vertente popular e romântica do samba, de rodas e grupos, com forte apelo comercial.",
+    "typicalInstruments": ["Cavaquinho", "Pandeiro", "Banjo", "Tantã", "Violão", "Vocais"],
+    "activeFromYear": 1980,
+    "activeToYear": null
+  },
+  {
+    "id": "genre_sertanejo",
+    "type": "Genre",
+    "name": "Sertanejo",
+    "slug": "sertanejo",
+    "countryOfOriginId": "country_brazil",
+    "parentGenreId": null,
+    "subgenreIds": [],
+    "description": "Música do interior do Brasil, das duplas caipiras ao sertanejo romântico, de grande alcance popular.",
+    "typicalInstruments": ["Viola caipira", "Violão", "Acordeão", "Baixo", "Bateria", "Vocais"],
+    "activeFromYear": 1920,
+    "activeToYear": null
+  },
+  {
+    "id": "genre_axe",
+    "type": "Genre",
+    "name": "Axé",
+    "slug": "axe",
+    "countryOfOriginId": "country_brazil",
+    "parentGenreId": null,
+    "subgenreIds": [],
+    "description": "Gênero baiano dançante surgido no carnaval, com forte energia e apelo de massa.",
+    "typicalInstruments": ["Guitarra baiana", "Percussão", "Baixo", "Bateria", "Sopros", "Vocais"],
+    "activeFromYear": 1985,
+    "activeToYear": null
+  },
+  {
+    "id": "genre_forro",
+    "type": "Genre",
+    "name": "Forró",
+    "slug": "forro",
+    "countryOfOriginId": "country_brazil",
+    "parentGenreId": null,
+    "subgenreIds": [],
+    "description": "Gênero nordestino dançante, base para festas juninas, do forró pé-de-serra ao eletrônico.",
+    "typicalInstruments": ["Sanfona", "Zabumba", "Triângulo", "Baixo", "Vocais"],
+    "activeFromYear": 1946,
+    "activeToYear": null
+  },
+  {
+    "id": "genre_gospel",
+    "type": "Genre",
+    "name": "Gospel",
+    "slug": "gospel",
+    "countryOfOriginId": "country_usa",
+    "parentGenreId": null,
+    "subgenreIds": [],
+    "description": "Música cristã de louvor, de raízes no gospel afro-americano, com forte presença vocal e coral.",
+    "typicalInstruments": ["Vocais", "Órgão", "Piano", "Coral", "Bateria", "Baixo"],
+    "activeFromYear": 1920,
+    "activeToYear": null
+  },
+  {
+    "id": "genre_country",
+    "type": "Genre",
+    "name": "Country",
+    "slug": "country",
+    "countryOfOriginId": "country_usa",
+    "parentGenreId": null,
+    "subgenreIds": [],
+    "description": "Música country dos Estados Unidos, de raízes folk e western, com narrativa e instrumentação acústica.",
+    "typicalInstruments": ["Violão", "Banjo", "Guitarra", "Violino", "Baixo", "Bateria"],
+    "activeFromYear": 1923,
+    "activeToYear": null
+  }
+]

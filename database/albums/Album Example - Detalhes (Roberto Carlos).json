@@ -1,0 +1,43 @@
+{
+  "id": "album_roberto_carlos_detalhes_1971",
+
+  "type": "Album",
+
+  "name": "Detalhes",
+  "officialName": "Roberto Carlos",
+
+  "artistId": "artist_roberto_carlos",
+  "bandId": null,
+
+  "albumType": "studio",
+
+  "releaseDate": "1971-12-01",
+
+  "countryId": "country_brazil",
+  "labelId": "label_cbs_brasil",
+
+  "genreIds": [
+    "genre_mpb"
+  ],
+
+  "themeId": null,
+
+  "language": "pt-BR",
+
+  "songIds": [
+    "song_detalhes",
+    "song_como_dois_e_dois",
+    "song_a_namorada",
+    "song_voce_nao_sabe_o_que_vai_perder",
+    "song_traumas",
+    "song_eu_so_tenho_um_caminho",
+    "song_todos_estao_surdos",
+    "song_de_tanto_amor",
+    "song_nao_sabe_voce",
+    "song_amadas_amante",
+    "song_ilegal_imoral_ou_engorda",
+    "song_se_eu_partir"
+  ],
+
+  "status": "released"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "label_emi_group",
+
+  "type": "Label",
+
+  "name": "EMI Group",
+
+  "brandTag": "emi",
+
+  "description": "Grupo fonográfico global de origem britânica, matriz das operações da EMI nos diversos países.",
+
+  "countryId": "country_western_europe",
+
+  "foundationYear": 1931,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 95,
+    "marketing": 92,
+    "distribution": 94,
+    "artistDevelopment": 92,
+    "financialPower": 93,
+    "industryInfluence": 94
+  },
+
+  "commercial": {
+    "budget": 200000000,
+    "marketShare": 18,
+    "activeArtists": 300,
+    "activeContracts": 350
+  },
+
+  "catalog": {
+    "songs": 260000,
+    "albums": 34000
+  },
+
+  "relationships": {
+    "artists": [],
+    "bands": [],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": true,
+    "acceptsDemos": false
+  }
+}

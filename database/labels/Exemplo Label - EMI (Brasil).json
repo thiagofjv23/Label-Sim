@@ -1,0 +1,49 @@
+{
+  "id": "label_emi_brazil",
+
+  "type": "Label",
+
+  "name": "EMI",
+
+  "brandTag": "emi",
+
+  "description": "Gravadora fonográfica multinacional, um dos grandes grupos da indústria musical, atuante no mercado brasileiro.",
+
+  "countryId": "country_brazil",
+
+  "foundationYear": 1953,
+
+  "status": "Active",
+
+  "ratings": {
+    "reputation": 85,
+    "marketing": 82,
+    "distribution": 84,
+    "artistDevelopment": 80,
+    "financialPower": 82,
+    "industryInfluence": 82
+  },
+
+  "commercial": {
+    "budget": 40000000,
+    "marketShare": 12,
+    "activeArtists": 60,
+    "activeContracts": 70
+  },
+
+  "catalog": {
+    "songs": 40000,
+    "albums": 5000
+  },
+
+  "relationships": {
+    "artists": [],
+    "bands": [],
+    "producers": []
+  },
+
+  "flags": {
+    "majorLabel": true,
+    "acceptsDemos": false
+  }
+}
